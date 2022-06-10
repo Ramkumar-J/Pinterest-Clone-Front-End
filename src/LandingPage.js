@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 function LandingPage() {
   return (
     <header>
@@ -42,20 +43,20 @@ function LandingPage() {
               </a>
             </li>
             <li className="nav-item ms-2">
-              <a
+              <Link
                 className="nav-link bg-danger rounded-pill text-white p-2"
-                href="#"
+                to="/login"
               >
                 Log in
-              </a>
+              </Link>
             </li>
             <li className="nav-item ms-2">
-              <a
+              <Link
                 className="nav-link bg-secondary bg-opacity-25 rounded-pill text-dark p-2"
-                href="#"
+                to="/signup"
               >
                 Sign up
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

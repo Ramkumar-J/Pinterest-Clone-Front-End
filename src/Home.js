@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Gallary from "./Gallary";
 function Home() {
   return (
     <header class="mt-2">
@@ -20,7 +21,7 @@ function Home() {
             <li class="nav-item ">
               <Link
                 class="nav-link text-white rounded-pill page-effect active"
-                to="/Home"
+                to="/home"
               >
                 Home
               </Link>
@@ -87,7 +88,9 @@ function Home() {
           </ul>
         </div>
       </nav>
+      <Gallary></Gallary>
     </header>
+    
   );
 }
 export default Home;

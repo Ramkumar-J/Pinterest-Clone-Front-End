@@ -7,6 +7,9 @@ import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from './LandingPage';
 import Home from './Home';
+import Signup from './Signup';
+import Login from './Login';
+import Gallary from './Gallary';
 
 
 function App() {
@@ -15,7 +18,10 @@ function App() {
       <div className="App">
         <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/Home" element={<Home />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/gallary" element={<Gallary />} />
         </Routes>
       </div>
     </BrowserRouter>

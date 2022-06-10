@@ -3,6 +3,8 @@
     padding:0;
     box-sizing: border-box;
 }
+
+/* Home page */
 .brand{
     color:rgb(204, 0, 0);
 }
@@ -25,4 +27,39 @@
     color:white !important;
     border-radius:50%;
     text-align: center;
+}
+
+/* Signup Page */
+.contain-size{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-size{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    width: 500px;
+    background-color: rgb(252, 252, 252) !important;
+    border-radius: 10% !important;
+}
+.logo{
+    margin-left: 150px;
+    margin-top: 20px;
+    height: 40px !important;
+}
+.in-box{
+    height:48px;
+    width: 250px;
+}
+.content{
+    font-size: 13px;
+}
+.img-size{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width:320px;
+    height: auto;
 }
