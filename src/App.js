@@ -6,23 +6,27 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from './LandingPage';
-import Home from './Home';
 import Signup from './Signup';
 import Login from './Login';
 import Gallary from './Gallary';
+import Pin from './Pin';
+import Navbar from './Navbar';
 
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+     <div id="wrapper" className="home-bg">
+        <Navbar></Navbar>
+        <div className="container-fluid">
         <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/gallary" element={<Gallary />} />
+        <Route path="/home" element={<Gallary />} />
+        <Route path="/createpin" element={<Pin />} />
         </Routes>
+      </div>
       </div>
     </BrowserRouter>
     

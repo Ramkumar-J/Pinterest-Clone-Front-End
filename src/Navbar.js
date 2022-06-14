@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Gallary from "./Gallary";
-function Home() {
+import Pin from "./Pin";
+function Navbar() {
   return (
     <header class="mt-2">
       <nav class="navbar navbar-expand-lg navbar-light text-dark fw-bolder bg-transparant">
@@ -49,9 +50,9 @@ function Home() {
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item text-dark fw-bolder" href="#">
+                  <Link class="dropdown-item text-dark fw-bolder" to="/createpin">
                     Create Pin
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -88,9 +89,10 @@ function Home() {
           </ul>
         </div>
       </nav>
-      <Gallary></Gallary>
+      {/* <Gallary></Gallary> */}
+      {/* <Pin></Pin> */}
     </header>
     
   );
 }
-export default Home;
+export default Navbar;

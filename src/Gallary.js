@@ -17,6 +17,8 @@ function Gallary(){
                 
             <div class="grid-item">
                 <img className="img-fluid img-size" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmlcycW7xLwycb8llHsIxGzEkyPgk-K_7y0w&usqp=CAU"></img>
+                <h5>Superheroes</h5>
+                <img class="img-fluid me-2 img-user" src="https://i.pinimg.com/75x75_RS/24/30/d2/2430d22def035ed725bffcafd7e275a7.jpg"></img><span>about pin😍🤩</span>
                 <img className="img-fluid img-size" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRycH6jh5yj4agzRAA76H5yahKQeL2a0Tp7Jw&usqp=CAU"></img>
                 <p>Superheroes</p>
                 <img className="img-fluid img-size" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgKgsZ1bpawOkbDvIqQqxGyNytSatEBytAcg&usqp=CAU"></img>

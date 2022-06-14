@@ -3,7 +3,10 @@
     padding:0;
     box-sizing: border-box;
 }
-
+/* .header-position{
+    position:sticky;
+    top: 0;
+} */
 /* Home page */
 .brand{
     color:rgb(204, 0, 0);
@@ -72,6 +75,11 @@
     gap:10px 10px;
     justify-content: center;
 }
+.img-user{
+    width:30px !important;
+    height:30px !important;
+    border-radius:50%;
+}
 /* .grid-item{
     position:relative; 
 } */
@@ -118,4 +126,40 @@ opacity: 1;
     opacity: 1;
 } */
 
-/* Gallary page */
+/* Create Pin page */
+.pin-bg{
+    background-color: #e9e9e9;
+    height: 100%;
+}
+.add-pin{
+    position: fixed;
+    left:10px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+/* .pin-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+} */
+.input-box{
+    border: none;
+    border-bottom:1px solid black ;
+    height:75px;
+    font-weight: 800;
+    font-size: 25px;
+    background-color: transparent;
+}
+/* .pin-container{
+    background-color: #e9e9e9;
+    height: 500px;
+} */
+textarea{
+    background-color: transparent;
+}
+
+/* .drag-bg{
+    wi
+} */
