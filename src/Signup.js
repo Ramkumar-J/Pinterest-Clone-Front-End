@@ -34,9 +34,9 @@ function Signup() {
   return (
     <>
       <LandingPage></LandingPage>
-      <div class="container-fluid contain-size">
+      <div class="container-fluid contain-size head-bg">
         <div class="card card-size">
-          <div class="card-body text-dark">
+          <div class="card-body text-white">
             <img
               class="img-fluid logo"
               src="./assets/icons8-pinterest-color-32.png"
@@ -87,7 +87,7 @@ function Signup() {
             </p>
             <p class="mb-0 mt-0 text-center content">
               <a
-                class="fw-bolder text-dark"
+                class="fw-bolder text-white"
                 href="#"
               >
                 Terms of Service
@@ -96,21 +96,21 @@ function Signup() {
             </p>
             <p class="mb-0 mt-0 text-center content">
               <a
-                class="fw-bolder text-dark"
+                class="fw-bolder text-white"
                 href="#"
               >
                 Privacy Policy
               </a>
             </p>
             <p class="mt-2 text-center content">
-              <Link class="fw-bolder text-dark" to="/login">
+              <Link class="fw-bolder text-white" to="/login">
                 Already a member? Log in
               </Link>
             </p>
             <p class="mt-2 text-center content">
               Are you a business?{" "}
               <a
-                class="fw-bolder text-dark"
+                class="fw-bolder text-white"
                 href="#"
               >
                 Get started here!

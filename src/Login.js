@@ -35,9 +35,9 @@ function Login() {
   return (
     <>
       <LandingPage></LandingPage>
-      <div class="container-fluid contain-size">
+      <div class="container-fluid contain-size head-bg">
         <div class="card card-size">
-          <div class="card-body text-dark">
+          <div class="card-body mt-2 text-white">
             <img
               class="img-fluid logo"
               src="./assets/icons8-pinterest-color-32.png"
@@ -79,25 +79,25 @@ function Login() {
               By continuing, you agree to Pinterest's
             </p>
             <p class="mb-0 mt-0 text-center content">
-              <a class="fw-bolder text-dark" href="#">
+              <a class="fw-bolder text-white" href="#">
                 Terms of Service
               </a>{" "}
-              acknowledge you've read our
+               acknowledge you've read our
             </p>
             <p class="mb-0 mt-0 text-center content">
-              <a class="fw-bolder text-dark" href="#">
+              <a class="fw-bolder text-white" href="#">
                 Privacy Policy
               </a>
             </p>
             <hr class="w-50 mx-auto"></hr>
             <p class="mt-2 text-center content">
-              <Link class="fw-bolder text-dark" to="/signup">
+              <Link class="fw-bolder text-white" to="/signup">
                 Not on Pinterest yet? Sign up
               </Link>
             </p>
             <p class="mt-2 text-center content">
               Are you a business?{" "}
-              <a class="fw-bolder text-dark" href="#">
+              <a class="fw-bolder text-white" href="#">
                 Get started here!
               </a>
             </p>
