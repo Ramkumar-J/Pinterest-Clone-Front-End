@@ -9,25 +9,25 @@ function Navbar() {
     window.localStorage.removeItem("pinteresttoken");
     navigate("/");
   }
-  const[Pins,setPins]=useState([]);
-    useEffect(() => {
-        async function getPin(){
-            try {
-                let pinData=await axios.get("http://localhost:3008/home",{
-                    headers:{
-                        Authorization:window.localStorage.getItem("pinteresttoken")
-                    }
-                });
+  // const[Pins,setPins]=useState([]);
+  //   useEffect(() => {
+  //       async function getPin(){
+  //           try {
+  //               let pinData=await axios.get("https://pinterest-clone-nodeapp.herokuapp.com/home",{
+  //                   headers:{
+  //                       Authorization:window.localStorage.getItem("pinteresttoken")
+  //                   }
+  //               });
                 
-            console.log(pinData);
-            setPins(pinData.data);
-              } catch (error) {
-                console.log(error);
-                alert("something went wrong");
-              }
-        }
-        getPin();
-      },[])
+  //           console.log(pinData);
+  //           setPins(pinData.data);
+  //             } catch (error) {
+  //               console.log(error);
+  //               alert("something went wrong");
+  //             }
+  //       }
+  //       getPin();
+  //     },[])
   return (
     <header class="mt-2">
       <nav class="navbar navbar-expand-lg navbar-light text-dark fw-bolder bg-transparant">
