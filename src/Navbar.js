@@ -1,19 +1,44 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Gallary from "./Gallary";
-import Pin from "./Pin";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
 function Navbar() {
+  const[searchTerm,setSearchTerm]=useState("");
+  let navigate=useNavigate();
+  let handleLogout=() => {
+    window.localStorage.removeItem("pinteresttoken");
+    navigate("/");
+  }
+  const[Pins,setPins]=useState([]);
+    useEffect(() => {
+        async function getPin(){
+            try {
+                let pinData=await axios.get("http://localhost:3008/home",{
+                    headers:{
+                        Authorization:window.localStorage.getItem("pinteresttoken")
+                    }
+                });
+                
+            console.log(pinData);
+            setPins(pinData.data);
+              } catch (error) {
+                console.log(error);
+                alert("something went wrong");
+              }
+        }
+        getPin();
+      },[])
   return (
     <header class="mt-2">
       <nav class="navbar navbar-expand-lg navbar-light text-dark fw-bolder bg-transparant">
-        <a class="navbar-brand ms-4 icon-effect">
+        <Link class="navbar-brand ms-4 icon-effect" to="/home">
           <img src="./assets/icons8-pinterest-color-32.png"></img>
-        </a>
+        </Link>
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="mainNavBar"
+          data-bs-target="#mainNavBar"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,20 +46,15 @@ function Navbar() {
           <ul class="navbar-nav fw-bolder fs-6">
             <li class="nav-item ">
               <Link
-                class="nav-link text-white rounded-pill page-effect active"
+                class="nav-link text-dark rounded-pill page-effect"
                 to="/home"
               >
                 Home
               </Link>
             </li>
-            <li class="nav-item ms-2">
-              <a class="nav-link text-dark page-effect" href="#">
-                Today
-              </a>
-            </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown ms-2">
               <a
-                class="nav-link dropdown-toggle text-dark page-effect"
+                class="nav-link dropdown-toggle text-dark rounded-pill page-effect"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -45,11 +65,6 @@ function Navbar() {
               </a>
               <ul class="dropdown-menu  fs-6" aria-labelledby="navBarDropdown">
                 <li>
-                  <a class="dropdown-item text-dark fw-bolder" href="#">
-                    Create Idea Pin
-                  </a>
-                </li>
-                <li>
                   <Link class="dropdown-item text-dark fw-bolder" to="/createpin">
                     Create Pin
                   </Link>
@@ -58,39 +73,51 @@ function Navbar() {
             </li>
           </ul>
           <form class="d-flex ms-3 icon-effect box">
-            {/* <i class="bi bi-search"></i> */}
             <input
               class="form-control rounded-pill bg-light"
               type="text"
               placeholder="Search"
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+              }}
             ></input>
+            {/* {
+              Pins.filter((val) => {
+                if(searchTerm == ""){
+                  return e;
+                }else if(e.title.toLowerCase().includes(searchTerm.toLowerCase()))
+                return e;
+              })
+            } */}
+            
           </form>
-          <ul class="navbar-nav ms-auto me-3">
-            <li class="nav-item me-2 icon-effect">
+          <ul class="navbar-nav ms-auto me-2">
+            <li class="nav-item me-1 icon-effect">
               <a class="nav-link" href="#">
                 <i class="bi bi-bell-fill fs-4"></i>
               </a>
             </li>
-            <li class="nav-item me-2 icon-effect">
+            <li class="nav-item me-1 icon-effect">
               <a class="nav-link" href="#">
                 <i class="bi bi-chat-dots-fill fs-4"></i>
               </a>
             </li>
-            <li class="nav-item me-2 icon-effect">
+            <li class="nav-item me-1 icon-effect">
               <a class="nav-link" href="#">
                 <i class="bi bi-person-circle fs-4"></i>
               </a>
             </li>
-            <li class="nav-item me-2 icon-effect">
-              <a class="nav-link mt-2" href="#">
-                <i class="bi bi-chevron-down fs-6"></i>
-              </a>
+            <li className="nav-item">
+              <button
+                className="btn btn-danger btn-sm rounded-pill text-white p-2 fs-6"
+                onClick={handleLogout}
+              >
+                Logout
+              </button>
             </li>
           </ul>
         </div>
       </nav>
-      {/* <Gallary></Gallary> */}
-      {/* <Pin></Pin> */}
     </header>
     
   );

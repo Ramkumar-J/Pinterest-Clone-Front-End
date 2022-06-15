@@ -4,41 +4,32 @@ function LandingPage() {
   return (
     <header>
       <nav className="navbar navbar-expand-lg bg-transparant mt-2">
-        <a className="navbar-brand ms-4 fw-bolder brand">
+        <Link className="navbar-brand ms-4 fw-bolder brand" to="/">
           <img src="./assets/icons8-pinterest-color-32.png"></img>
           Pinterest
-        </a>
+        </Link>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler text-dark"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#subNavBar"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon text-dark bg-secondary"></span>
         </button>
         <div className="collapse navbar-collapse" id="subNavBar">
           <ul className="navbar-nav ms-auto fw-bolder me-3 ms-5 fs-6">
             <li className="nav-item me-4">
-              <a
-                className="nav-link text-dark"
-                href="https://help.pinterest.com/en/guide/all-about-pinterest"
-              >
+              <a className="nav-link text-dark" href="#">
                 About
               </a>
             </li>
             <li className="nav-item me-3">
-              <a
-                className="nav-link text-dark"
-                href="https://business.pinterest.com/en-in/"
-              >
+              <a className="nav-link text-dark" href="#">
                 Bussiness
               </a>
             </li>
             <li className="nav-item me-3 ms-2">
-              <a
-                className="nav-link text-dark"
-                href="https://newsroom.pinterest.com/en"
-              >
+              <a className="nav-link text-dark" href="#">
                 Blog
               </a>
             </li>
