@@ -29,7 +29,7 @@ function Home() {
           <div class="row">
             {Pins.map((pin) => {
               return (
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                   <img
                     className="img-fluid mb-0 img-size"
                     src={pin.image}

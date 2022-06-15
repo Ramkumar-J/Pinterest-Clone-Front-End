@@ -66,7 +66,7 @@ function Pin() {
                   <form onSubmit={formik.handleSubmit}>
                     <div class="row mt-2">
                         {/* Leftside */}
-                      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                         <div class="row mt-5">
                           <div class="col-lg-12">
                             <label>Upload image link here</label>
@@ -85,7 +85,7 @@ function Pin() {
                         </div>
                       </div>
                       {/* Rightside */}
-                      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                         <div class="row mt-2">
                           <div class="col-lg-12">
                             <label>Title</label>
