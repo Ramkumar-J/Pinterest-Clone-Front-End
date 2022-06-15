@@ -6,7 +6,7 @@ function Home() {
   useEffect(() => {
     async function getPin() {
       try {
-        let pinData = await axios.get("http://localhost:3008/home", {
+        let pinData = await axios.get("https://pinterest-clone-nodeapp.herokuapp.com/home", {
           headers: {
             Authorization: window.localStorage.getItem("pinteresttoken"),
           },

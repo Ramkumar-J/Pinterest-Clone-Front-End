@@ -23,7 +23,7 @@ function Signup() {
     },
     onSubmit: async (values) => {
       try {
-        await axios.post("http://localhost:3008/signup", values);
+        await axios.post("https://pinterest-clone-nodeapp.herokuapp.com/signup", values);
         navigate("/login");
       } catch (error) {
         console.log(error);

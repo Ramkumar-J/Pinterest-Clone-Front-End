@@ -23,7 +23,7 @@ function Login() {
     },
     onSubmit: async (values) => {
       try {
-        let loginData = await axios.post("http://localhost:3008/login", values);
+        let loginData = await axios.post("https://pinterest-clone-nodeapp.herokuapp.com/login", values);
         window.localStorage.setItem("pinteresttoken", loginData.data.token);
         navigate("/home");
       } catch (error) {

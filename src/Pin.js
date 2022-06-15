@@ -22,7 +22,7 @@ function Pin() {
     },
     onSubmit: async (values) => {
       try {
-        await axios.post("http://localhost:3008/createpin", values, {
+        await axios.post("https://pinterest-clone-nodeapp.herokuapp.com/createpin", values, {
           headers: {
             Authorization: window.localStorage.getItem("pinteresttoken"),
           },
