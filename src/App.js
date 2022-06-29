@@ -9,6 +9,7 @@ import Signup from './Signup';
 import Login from './Login';
 import Pin from './Pin';
 import Home from './Home';
+import ViewPin from './ViewPin';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/createpin" element={<Pin />} />
+        <Route path="/viewpin/:id" element={<ViewPin />} />
         </Routes>
       </div>
     </BrowserRouter>
