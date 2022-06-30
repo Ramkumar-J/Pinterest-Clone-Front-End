@@ -10,11 +10,14 @@ import Login from './Login';
 import Pin from './Pin';
 import Home from './Home';
 import ViewPin from './ViewPin';
+import Navbar from './Navbar';
+import Profile from './Profile';
 
 
 function App() {
   return (
     <BrowserRouter>
+    <Navbar></Navbar>
         <div className="container-fluid">
         <Routes>
         <Route path="/" element={<LandingPage />} />
@@ -23,6 +26,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/createpin" element={<Pin />} />
         <Route path="/viewpin/:id" element={<ViewPin />} />
+        <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>
     </BrowserRouter>

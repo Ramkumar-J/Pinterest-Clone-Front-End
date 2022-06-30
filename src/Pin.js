@@ -37,7 +37,7 @@ function Pin() {
 
   return (
     <>
-      <Navbar></Navbar>
+      {/* <Navbar></Navbar> */}
       <div className="container-fluid p-0 pin-bg">
         <div className="add-pin">
           <button className="btn btn-secondary btn-lg">

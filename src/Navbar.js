@@ -103,9 +103,9 @@ function Navbar() {
               </a>
             </li>
             <li class="nav-item me-1 icon-effect">
-              <a class="nav-link" href="#">
+              <Link class="nav-link" to="/profile">
                 <i class="bi bi-person-circle fs-4"></i>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <button

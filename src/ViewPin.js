@@ -25,19 +25,19 @@ function ViewPin(){
   
     return(
         <>
-        <Navbar></Navbar>
-        <div className="container">
-            <div className="row mt-5 bg-light">
-                <div className="col-lg-6">
-                    <img class="img-fluid h-75 w-100" src={view.image}></img>
+        {/* <Navbar></Navbar> */}
+        <div className="container view-pin">
+            <div className="row mt-5">
+                <div className="col-lg-6 p-5">
+                    <img class="img-fluid h-75 w-100 rounded-2 bg-secondary" src={view.image}></img>
                 </div>
                 <div className="col-lg-6">
                     <div className="row mt-5">
                     <div className="col-lg-6">
-                    <a href="#"><img class="ms-2 rounded-circle p-1" src="https://img.icons8.com/ios-glyphs/30/share.png" alt=""/></a>
+                    <a href={view.image} download><img class="ms-2 rounded-circle p-1" src="https://img.icons8.com/pastel-glyph/40/download.png" alt=""/></a>
                         </div>
                         <div className="col-lg-6">
-                        <button class="btn btn-danger rounded-pill ms-5">Save</button>
+                        <button class="btn btn-danger ms-5 rounded-pill">Save</button>
                         </div>
                     </div>
                     <div className="row mt-3">
@@ -65,7 +65,9 @@ function ViewPin(){
                 </div>
             </div>
         </div>
-        {/* <Home></Home> */}
+        <div class="row mt-5">
+        <Home></Home>
+        </div>
         </>
     )
 }

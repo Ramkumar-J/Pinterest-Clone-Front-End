@@ -24,22 +24,22 @@ function Home() {
 
   return (
     <>
-      <Navbar></Navbar>
+      {/* <Navbar></Navbar> */}
       {Pins.length > 0 ? (
         <div className="container-fluid">
-           <div class="gallary">
+           <div class="gallary mt-3">
             {Pins.map((pin) => {
               return (
                 <div class="pin">
         <div class="image-container">
         <img class="pin-image" src={pin.image} alt="Image" />
         <div class="pin-content">
-            <a href="#"><img class="pin-icon me-5 rounded-circle p-1" src="https://img.icons8.com/ios-glyphs/25/share.png" alt=""/></a>
+            <a href={pin.image} download><img class="pin-icon me-5 rounded-circle p-1" src="https://img.icons8.com/external-ayo-icons-royyan-wijaya/25/external-arrow-arrow-line-ayo-icons-royyan-wijaya-2.png" alt=""/></a>
             <Link to={`/viewpin/${pin._id}`}><img class="pin-icon rounded-circle p-1" src="https://img.icons8.com/external-icongeek26-outline-icongeek26/25/external-view-graphic-design-icongeek26-outline-icongeek26.png" alt=""/></Link>
           </div>
         </div>
           <button class="btn btn-danger rounded-pill pin-button">Save</button>
-        <h5 className="mt-0 fw-bolder">{pin.title}</h5>
+        <h5 className="mt-1 fw-bolder">{pin.title}</h5>
                   <img
                     class="img-fluid me-2 user-image"
                     src="https://i.pinimg.com/75x75_RS/24/30/d2/2430d22def035ed725bffcafd7e275a7.jpg"
