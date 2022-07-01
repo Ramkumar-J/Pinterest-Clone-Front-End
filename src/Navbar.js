@@ -92,7 +92,28 @@ function Navbar() {
             
           </form>
           <ul class="navbar-nav ms-auto me-2">
-            <li class="nav-item me-1 icon-effect">
+          <li class="nav-item me-1 icon-effect">
+              <Link class="nav-link" to="/profile">
+                <i class="bi bi-person-circle fs-4"></i>
+              </Link>
+            </li>
+          <li className="nav-item ms-2">
+              <Link
+                className="nav-link bg-success rounded-pill text-white p-2"
+                to="/login"
+              >
+                Log in
+              </Link>
+            </li>
+            <li className="nav-item ms-2">
+              <Link
+                className="nav-link bg-secondary bg-opacity-25 rounded-pill text-dark p-2"
+                to="/signup"
+              >
+                Sign up
+              </Link>
+            </li>
+            {/* <li class="nav-item me-1 icon-effect">
               <a class="nav-link" href="#">
                 <i class="bi bi-bell-fill fs-4"></i>
               </a>
@@ -101,15 +122,15 @@ function Navbar() {
               <a class="nav-link" href="#">
                 <i class="bi bi-chat-dots-fill fs-4"></i>
               </a>
-            </li>
-            <li class="nav-item me-1 icon-effect">
+            </li> */}
+            {/* <li class="nav-item me-1 icon-effect">
               <Link class="nav-link" to="/profile">
                 <i class="bi bi-person-circle fs-4"></i>
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               <button
-                className="btn btn-danger btn-sm rounded-pill text-white p-2 fs-6"
+                className="btn btn-danger btn-sm rounded-pill text-white p-2 fs-6 ms-2"
                 onClick={handleLogout}
               >
                 Logout

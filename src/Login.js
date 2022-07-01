@@ -34,7 +34,7 @@ function Login() {
   });
   return (
     <>
-      <LandingPage></LandingPage>
+      {/* <LandingPage></LandingPage> */}
       <div class="container-fluid contain-size head-bg">
         <div class="card card-size">
           <div class="card-body mt-2 text-white">

@@ -33,7 +33,7 @@ function Signup() {
   });
   return (
     <>
-      <LandingPage></LandingPage>
+      {/* <LandingPage></LandingPage> */}
       <div class="container-fluid contain-size head-bg">
         <div class="card card-size">
           <div class="card-body text-white">
