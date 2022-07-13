@@ -32,7 +32,7 @@ function Navbar() {
     <header class="mt-2">
       <nav class="navbar navbar-expand-lg navbar-light text-dark fw-bolder bg-transparant">
         <Link class="navbar-brand ms-4 icon-effect" to="/home">
-          <img src="./assets/icons8-pinterest-color-32.png"></img>
+          <img src="https://img.icons8.com/color/40/pinterest--v1.png"></img>
         </Link>
         <button
           class="navbar-toggler"

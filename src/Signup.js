@@ -9,7 +9,7 @@ function Signup() {
     initialValues: {
       email: "",
       password: "",
-      age: "",
+      username: "",
     },
     validate: (values) => {
       const errors = {};
@@ -44,7 +44,7 @@ function Signup() {
             <h1 class="fs-2 fw-bolder mt-2">Welcome to Pinterest</h1>
             <p class="text-center">Find new ideas to try</p>
             <form onSubmit={formik.handleSubmit}>
-              <label className="ms-2">Email</label>
+              <label className="ms-2" for="email">Email</label>
               <input
                 class="form-control mt-1 mb-1 rounded-pill in-box"
                 type={"email"}
@@ -55,7 +55,7 @@ function Signup() {
                 value={formik.values.email}
               ></input>
               <span style={{ color: "red" }}>{formik.errors.email}</span>
-              <label className="ms-2">Password</label>
+              <label className="ms-2" for="password">Password</label>
               <input
                 class="form-control mt-1 mb-1 rounded-pill in-box"
                 type={"password"}
@@ -66,15 +66,15 @@ function Signup() {
                 value={formik.values.password}
               ></input>
               <span style={{ color: "red" }}>{formik.errors.password}</span>
-              <label className="ms-2">Age</label>
+              <label className="ms-2" for="user">User Name</label>
               <input
                 class="form-control mt-1 mb-1 rounded-pill in-box"
-                type={"age"}
-                name="age"
-                id="age"
-                placeholder="Age"
+                type={"text"}
+                name="username"
+                id="user"
+                placeholder="Name"
                 onChange={formik.handleChange}
-                value={formik.values.age}
+                value={formik.values.username}
               ></input>
               <input
                 class="form-control btn btn-danger rounded-pill text-center mt-2"
