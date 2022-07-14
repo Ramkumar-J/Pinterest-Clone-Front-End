@@ -20,11 +20,12 @@ function Profile(){
                   <p className="mt-2 text-center">@ramrk12</p>
                   <p className="text-center fs-5">10 Following</p>
                   <button className="btn bg-secondary bg-opacity-25 rounded-pill mx-auto text-dark fw-bolder p-2">Edit Profile</button>
-                  <p className="text-center mt-5 fs-5 fw-bolder text-decoration-underline profile-stick">Created Pins</p>
+                  <p className="text-center mt-5 fs-5 fw-bolder text-decoration-underline profile-stick"><Link to="/home">Created Pins</Link></p>
+                  <p className="text-center mt-2 fs-5 fw-bolder text-decoration-underline profile-stick"><Link to="/savedpins">Saved Pins</Link></p>
                     {/* <Link className="text-dark" to="/home">Created Pins</Link>  */}
                   {/* <a className="text-dark ms-3" href="#"><span>Saved</span></a> */}
                   {/* </p> */}
-                  <Home></Home>
+                  {/* <Home></Home> */}
             {/* </div> */}
             {/* <div className="row mt-3">
                 <h1 className="fw-bolder text-primary font-monospace">Profile</h1>

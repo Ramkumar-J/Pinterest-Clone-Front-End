@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
-  const[searchTerm,setSearchTerm]=useState("");
+  const[searchTerm,setSearchTerm]=useState([]);
   let navigate=useNavigate();
   let handleLogout=() => {
     window.localStorage.removeItem("pinteresttoken");
@@ -82,14 +82,13 @@ function Navbar() {
               }}
             ></input>
             {/* {
-              Pins.filter((val) => {
+              props.Pins.filter((val) => {
                 if(searchTerm == ""){
-                  return e;
-                }else if(e.title.toLowerCase().includes(searchTerm.toLowerCase()))
-                return e;
+                  return val;
+                }else if(val.title.toLowerCase().includes(searchTerm.toLowerCase()).toArray())
+                return val;
               })
             } */}
-            
           </form>
           <ul class="navbar-nav ms-auto me-2">
           <li class="nav-item me-1 icon-effect">

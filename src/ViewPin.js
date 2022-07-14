@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Home from "./Home";
 import Navbar from "./Navbar";
-function ViewPin(){
+function ViewPin(props){
     let params=useParams();
     let[view,setView]=useState([])
     useEffect(() => {
@@ -22,7 +22,30 @@ function ViewPin(){
     }
     getview();
     },[])
-  
+   
+   let comment= () => {
+    let list=document.createElement("list");
+    document.getElementById("commentline").appendChild(list);
+    let image=document.createElement("img");
+    image.setAttribute("src","https://img.icons8.com/fluency/35/user-male-circle.png");
+    image.classList.add("rounded-circle","mt-2");
+    let span=document.createElement("span");
+    span.classList.add("bg-white","tex-dark","fs-6","p-2","mt-5")
+    let inputValue=document.getElementById("myInput").value;
+   let node=document.createTextNode(inputValue);
+   span.appendChild(node);
+   let br=document.createElement("br");
+    if(inputValue === " "){
+        alert("Please write any comment");
+    }
+    else{
+        list.appendChild(image);
+        list.appendChild(span);
+        list.appendChild(br);
+        
+    }
+    document.getElementById("myInput").value=" ";
+   }
     return(
         <>
         {/* <Navbar></Navbar> */}
@@ -37,7 +60,7 @@ function ViewPin(){
                     <a href={view.image} download><img class="ms-2 rounded-circle p-1" src="https://img.icons8.com/pastel-glyph/40/download.png" alt=""/></a>
                         </div>
                         <div className="col-lg-6">
-                        <button class="btn btn-danger ms-5 rounded-pill">Save</button>
+                        <button class="btn btn-danger ms-5 rounded-pill" onClick={() => props.Addsavedpin(view)}>Save</button>
                         </div>
                     </div>
                     <div className="row mt-3">
@@ -58,16 +81,28 @@ function ViewPin(){
                     <div className="row mt-3">
                     <div className="col-lg-12">
                   <p className="fs-4 fw-bolder">Comments</p>
-                  <input className="form-control w-75 h-50" placeholder="Add a Comment"></input>
-                  <input className="btn btn-primary mt-3" type="button" value="Submit"></input>
-                        </div>   
-                    </div>
+                  <input className="form-control w-75 h-50" id="myInput" placeholder="Add a Comment"></input>
+                  <input className="btn btn-primary mt-3" onClick={comment}  type="submit" value="Submit"></input>
+                        </div>
+                        </div>
+                        <div className="row mt-5">
+                    <div className="col-lg-12">
+                        <ul id="commentline" className="p-0">
+                            
+                            </ul>   
+                    {/* <img
+                    class="rounded-circle mt-2"
+                    src="https://img.icons8.com/fluency/40/user-male-circle.png"
+                  ></img> */}
+</div>
+            </div>
+                   
                 </div>
             </div>
         </div>
-        <div class="row mt-5">
+        {/* <div class="row mt-5">
         <Home></Home>
-        </div>
+        </div> */}
         </>
     )
 }
