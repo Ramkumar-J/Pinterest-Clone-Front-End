@@ -3,6 +3,7 @@ import react, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function Home(props) {
+  const[searchTerm,setSearchTerm]=useState("");
   // const [Pins, setPins] = useState([]);
   // useEffect(() => {
   //   async function getPin() {
@@ -26,8 +27,35 @@ function Home(props) {
       {/* <Navbar></Navbar> */}
       {props.Pins.length > 0 ? (
         <div className="container-fluid">
-           <div class="gallary mt-3">
-            {props.Pins.map((pin) => {
+            <input
+              class="form-control rounded-pill bg-light w-50 mx-auto"
+              type="text"
+              placeholder="Search"
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+              }}
+            ></input>
+          <div class="gallary mt-4">
+           {/* <form class="d-flex ms-3 icon-effect box"> */}
+            {/* <input
+              class="form-control rounded-pill bg-light"
+              type="text"
+              placeholder="Search"
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+              }}
+            ></input> */}
+            {
+              props.Pins.filter((val) => {
+                if(searchTerm == ""){
+                  return val;
+                }else if(val.title.toLowerCase().includes(searchTerm.toLowerCase()))
+                return val;
+              })
+            
+       
+           
+            .map((pin) => {
               return (
                 <div class="pin">
         <div class="image-container">

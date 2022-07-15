@@ -1,7 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 
+
 function SavedPin(props) {
+  // let pinContext=useContext(Pincontext);
+  // const [savepin,setSavepin] = useState([]);
+//   useEffect(() => {
+//   setSavepin(JSON.parse(window.sessionStorage.getItem("savepin")));
+// }, []);
+
+// useEffect(() => {
+//   window.sessionStorage.setItem("savepin", savepin);
+// }, [savepin]);
+// useEffect(() => {
+//   let data=localStorage.getItem("savepin");
+//   if(data) {
+//     pinContext.setSavepin(JSON.parse(data));
+//   }
+// }, []);
+
+// useEffect(() => {
+//   localStorage.pinContext.setItem("savepin", JSON.stringify(savepin));
+// });
   return (
     <div className='container'>
         <div class="gallary mt-3">

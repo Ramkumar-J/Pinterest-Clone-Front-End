@@ -238,7 +238,7 @@ textarea {
   /* margin-left: 250px; */
   border-radius:30px;
   height: 300px !important;
-  width:800px;
+  width:100%;
   
   /* box-shadow:10px 10px 10px rgb(56, 56, 56); */
 }
@@ -249,6 +249,8 @@ textarea {
   height: 100px !important;
   width: 100px !important;
   margin-left:45%;
+  position: relative;
+  margin-top: -55px;
 }
 .profile-stick{
   position: sticky;
@@ -317,4 +319,10 @@ text{
     display: flex;
     justify-content: center;
     align-items: center;
+} */
+
+/* .searchbox{
+  position: relative;
+  margin-left: 100px;
+  margin-top: -65px;
 } */

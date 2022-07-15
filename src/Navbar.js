@@ -72,15 +72,15 @@ function Navbar() {
               </ul>
             </li>
           </ul>
-          <form class="d-flex ms-3 icon-effect box">
-            <input
+          {/* <form class="d-flex ms-3 icon-effect box"> */}
+            {/* <input
               class="form-control rounded-pill bg-light"
               type="text"
               placeholder="Search"
               onChange={(e) => {
                 setSearchTerm(e.target.value);
               }}
-            ></input>
+            ></input> */}
             {/* {
               props.Pins.filter((val) => {
                 if(searchTerm == ""){
@@ -89,7 +89,7 @@ function Navbar() {
                 return val;
               })
             } */}
-          </form>
+          {/* </form> */}
           <ul class="navbar-nav ms-auto me-2">
           <li class="nav-item me-1 icon-effect">
               <Link class="nav-link" to="/profile">

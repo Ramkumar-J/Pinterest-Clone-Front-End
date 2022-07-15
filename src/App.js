@@ -31,7 +31,7 @@ function App() {
         console.log(pinData);
         setPins(pinData.data);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
         alert("something went wrong");
       }
     }
@@ -48,6 +48,16 @@ let Removesavedpin = (pin) => {
   setSavepin([...savepin]);
 }
 
+// useEffect(() => {
+//   let data=localStorage.getItem("savepin");
+//   if(data) {
+//     setSavepin(JSON.parse(data));
+//   }
+// }, []);
+
+// useEffect(() => {
+//   localStorage.setItem("savepin", JSON.stringify(savepin));
+// });
   return (
     <BrowserRouter>
     <Navbar Pins={Pins}></Navbar>
