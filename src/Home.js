@@ -69,7 +69,7 @@ function Home(props) {
         <h5 className="mt-1 fw-bolder">{pin.title}</h5>
                   <img
                     class="img-fluid me-2 user-image"
-                    src="https://i.pinimg.com/75x75_RS/24/30/d2/2430d22def035ed725bffcafd7e275a7.jpg"
+                    src="https://i.pinimg.com/75x75_RS/e9/f7/e1/e9f7e101e3b7484d53b2b4d5a6004740.jpg"
                   ></img>
                   <span>{pin.about}</span>
     </div>

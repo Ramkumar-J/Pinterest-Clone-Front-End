@@ -5,6 +5,7 @@
 }
 .head-bg{
     background: rgba(0,0,0,0.6) url("https://cdn.wallpapersafari.com/46/34/Mxjr2p.jpg");
+    /* background: rgba(0,0,0,0.6) url("https://media.istockphoto.com/photos/pink-sunset-picture-id1139149089?b=1&k=20&m=1139149089&s=170667a&w=0&h=LcJIu-j_k0mz6ItmKawPuoRiBmuSivvGAEHkf98cfdQ="); */
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,9 +25,13 @@
     width: 300px !important;
     height: 48px;
   }
-  .icon-effect {
+  /* .icon-effect {
     display: flex;
     justify-content: space-around;
+  } */
+  
+  .user-pic{
+    margin-left:35% !important; 
   }
 }
 @media (max-width: 792px) {
@@ -34,10 +39,10 @@
     width: 500px !important;
     height: 48px;
   }
-  .icon-effect {
+  /* .icon-effect {
     display: flex;
     justify-content: space-around;
-  }
+  } */
 }
 @media (max-width: 1200px) {
   .box {
@@ -94,7 +99,8 @@
 
 .gallary .pin{
   max-width:100%;
-  margin:10px;
+  margin-left:10px;
+  margin-bottom: 10px;
   height: 100%;
   /* background:rgb(223, 222, 222); */
   overflow: hidden;
@@ -169,11 +175,13 @@
   .gallary{
       columns:1;
   }
+  
 }
 @media (max-width:0px){
   .gallary{
       columns:1;
   }
+
 }
 
 /* .img-size {
@@ -227,29 +235,32 @@ textarea {
 
 /* View Pin Image */
 .view-pin{
-  height: 800px;
+  height: auto;
   background-color: rgb(248, 248, 248);
   border-radius:20px;
   box-shadow:10px 10px 10px rgb(56, 56, 56);
 }
 
+.viewpin-image{
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
 /* Profile page */
 .profile-cover{
   /* margin-left: 250px; */
-  border-radius:30px;
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
   height: 300px !important;
   width:100%;
   
   /* box-shadow:10px 10px 10px rgb(56, 56, 56); */
 }
 .user-pic{
-  /* margin-top: 300px;
-  margin-left: -315px; */
-  /* position: absolute; */
-  height: 100px !important;
+  /* height: 100px !important; */
   width: 100px !important;
   margin-left:45%;
-  position: relative;
+  /* position: relative; */
   margin-top: -55px;
 }
 .profile-stick{
@@ -326,3 +337,18 @@ text{
   margin-left: 100px;
   margin-top: -65px;
 } */
+
+.profile{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  text-align: center;
+  /* background-color:#c9aa96; */
+  /* background-image: url("https://media.istockphoto.com/photos/pink-sunset-picture-id1139149089?b=1&k=20&m=1139149089&s=170667a&w=0&h=LcJIu-j_k0mz6ItmKawPuoRiBmuSivvGAEHkf98cfdQ=");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; */
+}

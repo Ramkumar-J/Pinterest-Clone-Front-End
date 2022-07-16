@@ -39,11 +39,11 @@ function Pin() {
     <>
       {/* <Navbar></Navbar> */}
       <div className="container-fluid p-0 pin-bg">
-        <div className="add-pin">
+        {/* <div className="add-pin">
           <button className="btn btn-secondary btn-lg">
             <i class="bi bi-image"></i>
           </button>
-        </div>
+        </div> */}
         <div className="row">
           <div className="col-lg-12">
             <div className="row mt-5">
@@ -56,18 +56,18 @@ function Pin() {
                   </div>
                 </div>
                 <div class="pin-container bg-light p-3 rounded">
-                  <div class="row mt-2">
+                  {/* <div class="row mt-2">
                     <div class="col-lg-6">
                       <button class="btn btn-light btn-outline-primary rounded-circle">
                         <i class="bi bi-three-dots"></i>
                       </button>
                     </div>
-                  </div>
+                  </div> */}
                   <form onSubmit={formik.handleSubmit}>
                     <div class="row mt-2">
                         {/* Leftside */}
                       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                        <div class="row mt-5">
+                        <div class="row mt-3">
                           <div class="col-lg-12">
                             <label>Upload image link here</label>
                             <input
@@ -86,11 +86,11 @@ function Pin() {
                       </div>
                       {/* Rightside */}
                       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                        <div class="row mt-2">
+                        <div class="row mt-3">
                           <div class="col-lg-12">
                             <label>Title</label>
                             <input
-                              class="form-control input-box mt-3 fw-bolder"
+                              class="form-control input-box mt-2 fw-bolder"
                               type={"text"}
                               placeholder="Add a Title"
                               name="title"

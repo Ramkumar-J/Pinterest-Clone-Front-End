@@ -30,7 +30,7 @@ function Navbar() {
   //     },[])
   return (
     <header class="mt-2">
-      <nav class="navbar navbar-expand-lg navbar-light text-dark fw-bolder bg-transparant">
+      <nav class="navbar navbar-expand-md navbar-light text-dark fw-bolder bg-transparant">
         <Link class="navbar-brand ms-4 icon-effect" to="/home">
           <img src="https://img.icons8.com/color/40/pinterest--v1.png"></img>
         </Link>
@@ -44,7 +44,7 @@ function Navbar() {
         </button>
         <div class="collapse navbar-collapse" id="mainNavBar">
           <ul class="navbar-nav fw-bolder fs-6">
-            <li class="nav-item ">
+            <li class="nav-item ms-2">
               <Link
                 class="nav-link text-dark rounded-pill page-effect"
                 to="/home"
@@ -63,7 +63,7 @@ function Navbar() {
               >
                 Create
               </a>
-              <ul class="dropdown-menu  fs-6" aria-labelledby="navBarDropdown">
+              <ul class="dropdown-menu fs-6" aria-labelledby="navBarDropdown">
                 <li>
                   <Link class="dropdown-item text-dark fw-bolder" to="/createpin">
                     Create Pin
@@ -91,26 +91,27 @@ function Navbar() {
             } */}
           {/* </form> */}
           <ul class="navbar-nav ms-auto me-2">
-          <li class="nav-item me-1 icon-effect">
+          <li class="nav-item ms-2 icon-effect">
               <Link class="nav-link" to="/profile">
                 <i class="bi bi-person-circle fs-4"></i>
               </Link>
             </li>
-          <li className="nav-item ms-2">
+          {/* <li className="nav-item ms-2">
               <Link
                 className="nav-link bg-success rounded-pill text-white p-2"
                 to="/login"
               >
                 Log in
               </Link>
-            </li>
-            <li className="nav-item ms-2">
+            </li> */}
+            <li className="nav-item">
+              <button className="btn btn-sm">
               <Link
-                className="nav-link bg-secondary bg-opacity-25 rounded-pill text-dark p-2"
+                className="nav-link bg-secondary bg-opacity-25 rounded-pill fs-6 text-dark p-2"
                 to="/signup"
               >
                 Sign up
-              </Link>
+              </Link></button>
             </li>
             {/* <li class="nav-item me-1 icon-effect">
               <a class="nav-link" href="#">
@@ -127,9 +128,9 @@ function Navbar() {
                 <i class="bi bi-person-circle fs-4"></i>
               </Link>
             </li> */}
-            <li className="nav-item">
+            <li className="nav-item ms-2 mt-1">
               <button
-                className="btn btn-danger btn-sm rounded-pill text-white p-2 fs-6 ms-2"
+                className="btn btn-danger btn-sm rounded-pill text-white p-2 fs-6"
                 onClick={handleLogout}
               >
                 Logout
