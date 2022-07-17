@@ -18,21 +18,6 @@ function LandingPage() {
         </button>
         <div className="collapse navbar-collapse" id="subNavBar">
           <ul className="navbar-nav ms-auto fw-bolder me-3 ms-5 fs-6">
-            {/* <li className="nav-item me-4">
-              <a className="nav-link text-dark" href="#">
-                About
-              </a>
-            </li>
-            <li className="nav-item me-3">
-              <a className="nav-link text-dark" href="#">
-                Bussiness
-              </a>
-            </li>
-            <li className="nav-item me-3 ms-2">
-              <a className="nav-link text-dark" href="#">
-                Blog
-              </a>
-            </li> */}
             <li className="nav-item ms-2">
               <Link
                 className="nav-link bg-danger rounded-pill text-white p-2"

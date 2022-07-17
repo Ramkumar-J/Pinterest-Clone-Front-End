@@ -39,11 +39,6 @@ function Pin() {
     <>
       {/* <Navbar></Navbar> */}
       <div className="container-fluid p-0 pin-bg">
-        {/* <div className="add-pin">
-          <button className="btn btn-secondary btn-lg">
-            <i class="bi bi-image"></i>
-          </button>
-        </div> */}
         <div className="row">
           <div className="col-lg-12">
             <div className="row mt-5">
