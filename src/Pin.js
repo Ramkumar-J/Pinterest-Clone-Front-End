@@ -36,8 +36,6 @@ function Pin() {
   });
 
   return (
-    <>
-      {/* <Navbar></Navbar> */}
       <div className="container-fluid p-0 pin-bg">
         <div className="row">
           <div className="col-lg-12">
@@ -51,13 +49,6 @@ function Pin() {
                   </div>
                 </div>
                 <div class="pin-container bg-light p-3 rounded">
-                  {/* <div class="row mt-2">
-                    <div class="col-lg-6">
-                      <button class="btn btn-light btn-outline-primary rounded-circle">
-                        <i class="bi bi-three-dots"></i>
-                      </button>
-                    </div>
-                  </div> */}
                   <form onSubmit={formik.handleSubmit}>
                     <div class="row mt-2">
                         {/* Leftside */}
@@ -67,7 +58,7 @@ function Pin() {
                             <label>Upload image link here</label>
                             <input
                               type={"text"}
-                              className="form-control imagebox mt-2"
+                              className="form-control mt-2"
                               accept="image/*"
                               name="image"
                               onChange={formik.handleChange}
@@ -85,7 +76,7 @@ function Pin() {
                           <div class="col-lg-12">
                             <label>Title</label>
                             <input
-                              class="form-control input-box mt-2 fw-bolder"
+                              class="form-control mt-2 fw-bolder input-box"
                               type={"text"}
                               placeholder="Add a Title"
                               name="title"
@@ -112,7 +103,7 @@ function Pin() {
                           <div class="col-lg-12">
                             <label>Link</label>
                             <input
-                              class="form-control input-box mt-3 fs-5 fw-light"
+                              class="form-control mt-3 fs-5 fw-light input-box"
                               type={"text"}
                               placeholder="Add a destination link"
                               name="link"
@@ -139,7 +130,6 @@ function Pin() {
           </div>
         </div>
       </div>
-    </>
   );
 }
 

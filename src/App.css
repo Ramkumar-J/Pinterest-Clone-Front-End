@@ -1,59 +1,15 @@
-* {
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.head-bg{
-    background: rgba(0,0,0,0.6) url("https://cdn.wallpapersafari.com/46/34/Mxjr2p.jpg");
-    /* background: rgba(0,0,0,0.6) url("https://media.istockphoto.com/photos/pink-sunset-picture-id1139149089?b=1&k=20&m=1139149089&s=170667a&w=0&h=LcJIu-j_k0mz6ItmKawPuoRiBmuSivvGAEHkf98cfdQ="); */
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 0;
-    background-blend-mode: darken;
-}
-/* Home page */
-.brand {
-  color: rgb(204, 0, 0);
-}
-.box {
-  width: 820px !important;
-  height: 48px;
-}
-@media (max-width: 576px) {
-  .box {
-    width: 300px !important;
-    height: 48px;
-  }
-  /* .icon-effect {
-    display: flex;
-    justify-content: space-around;
-  } */
-  
-  .user-pic{
-    margin-left:35% !important; 
-  }
-}
-@media (max-width: 792px) {
-  .box {
-    width: 500px !important;
-    height: 48px;
-  }
-  /* .icon-effect {
-    display: flex;
-    justify-content: space-around;
-  } */
-}
-@media (max-width: 1200px) {
-  .box {
-    width: 500px !important;
-    height: 48px;
-  }
-}
+
+/* Navbar */
 .icon-effect:hover {
   background-color: rgb(224, 221, 221);
 }
-.page-effect:hover {
+.nav-effect:hover {
   background-color: black;
   color: white !important;
   text-align: center;
@@ -87,43 +43,43 @@
   font-size: 13px;
 }
 
-/* Gallary page */
-.gallary{
-  /* width:1200px; */
-  columns:5;
-  /* margin-right: 20px; */
-  /* margin-top: 20px; */
-  column-gap: 5px;
-  
+/* Login and Signup Background */
+.login-bg{
+  background: rgba(0,0,0,0.6) url("https://cdn.wallpapersafari.com/46/34/Mxjr2p.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+  background-blend-mode: darken;
 }
 
+/* Home page */
+.gallary{
+  columns:5;
+  column-gap: 5px;
+}
 .gallary .pin{
   max-width:100%;
   margin-left:10px;
   margin-bottom: 10px;
   height: 100%;
-  /* background:rgb(223, 222, 222); */
   overflow: hidden;
   position: relative;
 }
-
 .gallary .pin .pin-image{
   width: 100%;
   height: 100%;
   border-radius: 5%;
   opacity:1;
 }
-
 .pin-image:hover{
  opacity: 0.5;
 }
-
 .user-image {
   width: 30px !important;
   height: 30px !important;
   border-radius: 50%;
 }
-
 .pin-icon{
   position:absolute;
   bottom:70px;
@@ -131,14 +87,12 @@
   background-color: rgb(163, 162, 162);
   opacity: 0.3;
 }
-
 .pin-button{
   position:absolute;
   top:10px;
   right:10px;
   opacity: 0.3;
 }
-
 .pin-icon:hover{
   opacity: 1;
   background-color: rgb(201, 201, 194);
@@ -146,16 +100,13 @@
 .pin-button:hover{
   opacity: 1;
 }
-
 .image-container{
   opacity:1
 }
-
 .image-container:hover{
   opacity:0.8;
   cursor: zoom-in;
 }
-
 @media (max-width:1200px){
   .gallary{
       columns:4;
@@ -174,8 +125,7 @@
 @media (max-width:576px){
   .gallary{
       columns:1;
-  }
-  
+  } 
 }
 @media (max-width:0px){
   .gallary{
@@ -184,35 +134,10 @@
 
 }
 
-/* .img-size {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  opacity: 1;
-  background-color: rgb(26, 24, 24);
-  width: 320px;
-}
-.img-user {
-  width: 30px !important;
-  height: 30px !important;
-  border-radius: 50%;
-}
-.img-size:hover {
-  opacity: 0.7;
-  cursor: zoom-in;
-} */
-
 /* Create Pin page */
 .pin-bg {
   background-color: #e9e9e9;
   height: 100%;
-}
-.add-pin {
-  position: fixed;
-  left: 10px;
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
 }
 .input-box {
   border: none;
@@ -224,13 +149,6 @@
 }
 textarea {
   background-color: transparent;
-}
-.filebox {
-  height: 200px;
-  width: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* View Pin Image */
@@ -247,75 +165,30 @@ textarea {
 }
 
 /* Profile page */
+.profile{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow:10px 10px 10px rgb(56, 56, 56);
+}
 .profile-cover{
-  /* margin-left: 250px; */
   border-top-left-radius:20px;
   border-top-right-radius:20px;
   height: 300px !important;
-  width:100%;
-  
-  /* box-shadow:10px 10px 10px rgb(56, 56, 56); */
+  width:100%; 
 }
 .user-pic{
-  /* height: 100px !important; */
   width: 100px !important;
   margin-left:45%;
-  /* position: relative; */
   margin-top: -55px;
 }
 .profile-stick{
   position: sticky;
   top: 0;
 }
-
-/* Gallary page */
-/* .grid-container {
-    display: grid;
-    grid-template-columns: 250px 250px 250px 250px 250px;
-    gap: 10px 10px;
-    justify-content: center;
-  } */
-/* .grid-item{
-    position:relative; 
-} */
-/* .top-layer{
-    position:absolute;
-    bottom:15px;
-    left:5px;
-    right:5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-} */
-/* .top-link{
-    display: flex;
-    margin-left: 0;
-    background-color: rgb(201, 200, 200);
-    border-radius: 50%;
-} */
-/* .top-icons{
-    display: flex;
-    opacity: 0.2;
-} */
-/* .top-icons a{
-    background-color: rgb(201, 200, 200);
-    border-radius: 50%;
-    margin-left: 5px;
-    
-} */
-/* .grid-item button{
-    position: absolute;
-    bottom:395px;
-    right:5px;
-    opacity: 0.2;
-} */
-/* .grid-item button:hover{
-opacity: 1;
-
-} */
-/* .top-icons:hover{
-    opacity: 1;
-} */
 
 /* Drag and Drop */
 /* .drag-bg{
@@ -338,17 +211,3 @@ text{
   margin-top: -65px;
 } */
 
-.profile{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-  text-align: center;
-  /* background-color:#c9aa96; */
-  /* background-image: url("https://media.istockphoto.com/photos/pink-sunset-picture-id1139149089?b=1&k=20&m=1139149089&s=170667a&w=0&h=LcJIu-j_k0mz6ItmKawPuoRiBmuSivvGAEHkf98cfdQ=");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh; */
-}

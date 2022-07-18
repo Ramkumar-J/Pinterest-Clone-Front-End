@@ -3,31 +3,12 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
-  const[searchTerm,setSearchTerm]=useState([]);
-  let navigate=useNavigate();
-  let handleLogout=() => {
+  let navigate = useNavigate();
+  let handleLogout = () => {
     window.localStorage.removeItem("pinteresttoken");
     navigate("/");
-  }
-  // const[Pins,setPins]=useState([]);
-  //   useEffect(() => {
-  //       async function getPin(){
-  //           try {
-  //               let pinData=await axios.get("https://pinterest-clone-nodeapp.herokuapp.com/home",{
-  //                   headers:{
-  //                       Authorization:window.localStorage.getItem("pinteresttoken")
-  //                   }
-  //               });
-                
-  //           console.log(pinData);
-  //           setPins(pinData.data);
-  //             } catch (error) {
-  //               console.log(error);
-  //               alert("something went wrong");
-  //             }
-  //       }
-  //       getPin();
-  //     },[])
+  };
+
   return (
     <header class="mt-2">
       <nav class="navbar navbar-expand-md navbar-light text-dark fw-bolder bg-transparant">
@@ -46,7 +27,7 @@ function Navbar() {
           <ul class="navbar-nav fw-bolder fs-6">
             <li class="nav-item ms-2">
               <Link
-                class="nav-link text-dark rounded-pill page-effect"
+                class="nav-link text-dark rounded-pill nav-effect"
                 to="/home"
               >
                 Home
@@ -54,7 +35,7 @@ function Navbar() {
             </li>
             <li class="nav-item dropdown ms-2">
               <a
-                class="nav-link dropdown-toggle text-dark rounded-pill page-effect"
+                class="nav-link dropdown-toggle text-dark rounded-pill nav-effect"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -65,7 +46,10 @@ function Navbar() {
               </a>
               <ul class="dropdown-menu fs-6" aria-labelledby="navBarDropdown">
                 <li>
-                  <Link class="dropdown-item text-dark fw-bolder" to="/createpin">
+                  <Link
+                    class="dropdown-item text-dark fw-bolder"
+                    to="/createpin"
+                  >
                     Create Pin
                   </Link>
                 </li>
@@ -73,7 +57,7 @@ function Navbar() {
             </li>
           </ul>
           {/* <form class="d-flex ms-3 icon-effect box"> */}
-            {/* <input
+          {/* <input
               class="form-control rounded-pill bg-light"
               type="text"
               placeholder="Search"
@@ -81,37 +65,32 @@ function Navbar() {
                 setSearchTerm(e.target.value);
               }}
             ></input> */}
-            {/* {
-              props.Pins.filter((val) => {
-                if(searchTerm == ""){
-                  return val;
-                }else if(val.title.toLowerCase().includes(searchTerm.toLowerCase()).toArray())
-                return val;
-              })
-            } */}
           {/* </form> */}
           <ul class="navbar-nav ms-auto me-2">
-          <li class="nav-item ms-2 icon-effect">
+            <li class="nav-item ms-2 icon-effect">
               <Link class="nav-link" to="/profile">
                 <i class="bi bi-person-circle fs-4"></i>
               </Link>
             </li>
-          {/* <li className="nav-item ms-2">
-              <Link
-                className="nav-link bg-success rounded-pill text-white p-2"
-                to="/login"
-              >
-                Log in
-              </Link>
-            </li> */}
             <li className="nav-item">
               <button className="btn btn-sm">
-              <Link
-                className="nav-link bg-secondary bg-opacity-25 rounded-pill fs-6 text-dark p-2"
-                to="/signup"
-              >
-                Sign up
-              </Link></button>
+                <Link
+                  className="nav-link bg-success rounded-pill fs-6 text-white fw-bold p-2"
+                  to="/login"
+                >
+                  Log in
+                </Link>
+              </button>
+            </li>
+            <li className="nav-item">
+              <button className="btn btn-sm">
+                <Link
+                  className="nav-link bg-secondary bg-opacity-25 rounded-pill fs-6 text-dark fw-bold p-2"
+                  to="/signup"
+                >
+                  Sign up
+                </Link>
+              </button>
             </li>
             {/* <li class="nav-item me-1 icon-effect">
               <a class="nav-link" href="#">
@@ -130,7 +109,7 @@ function Navbar() {
             </li> */}
             <li className="nav-item ms-2 mt-1">
               <button
-                className="btn btn-danger btn-sm rounded-pill text-white p-2 fs-6"
+                className="btn btn-danger btn-sm rounded-pill text-white p-2 fw-bold fs-6"
                 onClick={handleLogout}
               >
                 Logout
@@ -140,7 +119,6 @@ function Navbar() {
         </div>
       </nav>
     </header>
-    
   );
 }
 export default Navbar;

@@ -4,7 +4,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LandingPage from './LandingPage';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 import Signup from './Signup';
 import Login from './Login';
 import Pin from './Pin';
@@ -13,8 +14,7 @@ import ViewPin from './ViewPin';
 import Navbar from './Navbar';
 import Profile from './Profile';
 import SavedPin from './SavedPin';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+
 
 
 function App() {
@@ -31,7 +31,6 @@ function App() {
         console.log(pinData);
         setPins(pinData.data);
       } catch (error) {
-        // console.log(error);
         alert("something went wrong");
       }
     }

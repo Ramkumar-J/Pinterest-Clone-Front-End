@@ -56,14 +56,14 @@ function Home(props) {
                     <div class="pin-content">
                       <a href={pin.image} download>
                         <img
-                          class="pin-icon me-5 rounded-circle p-1"
+                          class="me-5 rounded-circle p-1 pin-icon"
                           src="https://img.icons8.com/external-ayo-icons-royyan-wijaya/25/external-arrow-arrow-line-ayo-icons-royyan-wijaya-2.png"
                           alt=""
                         />
                       </a>
                       <Link to={`/viewpin/${pin._id}`}>
                         <img
-                          class="pin-icon rounded-circle p-1"
+                          class="rounded-circle p-1 pin-icon"
                           src="https://img.icons8.com/external-icongeek26-outline-icongeek26/25/external-view-graphic-design-icongeek26-outline-icongeek26.png"
                           alt=""
                         />
