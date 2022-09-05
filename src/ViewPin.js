@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Home from "./Home";
+import Home from "./Pages/Home";
 import Navbar from "./Navbar";
 function ViewPin(props) {
   let params = useParams();
@@ -53,13 +53,13 @@ function ViewPin(props) {
   return (
       <div className="container p-0 view-pin">
         <div className="row mt-3 mb-5">
-          <div className="col-lg-6">
+          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
             <img
               class="img-fluid w-100 bg-secondary viewpin-image"
               src={view.image}
             ></img>
           </div>
-          <div className="col-lg-6 p-5">
+          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 p-5">
             <div className="row mt-3">
               <div className="col-6 col-sm-6 col-md-6 col-lg-6">
                 <a href={view.image} download>

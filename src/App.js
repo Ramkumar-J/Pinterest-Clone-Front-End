@@ -6,13 +6,13 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import Signup from './Signup';
-import Login from './Login';
+import Signup from './Pages/Signup';
+import Login from './Pages/Login';
 import Pin from './Pin';
-import Home from './Home';
+import Home from './Pages/Home';
 import ViewPin from './ViewPin';
 import Navbar from './Navbar';
-import Profile from './Profile';
+import Profile from './Pages/Profile';
 import SavedPin from './SavedPin';
 
 

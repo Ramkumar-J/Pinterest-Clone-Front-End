@@ -2,7 +2,7 @@ import axios from "axios";
 import { useFormik } from "formik";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import LandingPage from "./LandingPage";
+// import LandingPage from "./LandingPage";
 
 function Login() {
   let navigate = useNavigate();
