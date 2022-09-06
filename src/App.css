@@ -211,3 +211,23 @@ text{
   margin-top: -65px;
 } */
 
+.today-card{
+  border-radius: 30px !important;
+}
+
+.today-image{
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  height: 200px !important;
+  width: 100%;
+}
+
+.today-card:hover{
+  background-color: rgb(238, 238, 238);
+}
+
+/* .one{
+  position: sticky !important;
+  top:0px;
+  width: 100%;
+} */

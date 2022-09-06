@@ -1,5 +1,4 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
@@ -11,7 +10,10 @@ function Navbar() {
 
   return (
     <header class="mt-2">
-      <nav class="navbar navbar-expand-md navbar-light text-dark fw-bolder bg-transparant">
+      {/* <div>
+      <h1>Pinterest</h1>
+      </div> */}
+      <nav class="navbar navbar-expand-md navbar-light text-dark fw-bolder bg-transparant one">
         <Link class="navbar-brand ms-4 icon-effect" to="/home">
           <img src="https://img.icons8.com/color/40/pinterest--v1.png"></img>
         </Link>
@@ -31,6 +33,14 @@ function Navbar() {
                 to="/home"
               >
                 Home
+              </Link>
+            </li>
+            <li class="nav-item ms-2">
+              <Link
+                class="nav-link text-dark rounded-pill nav-effect"
+                to="/today"
+              >
+                Today
               </Link>
             </li>
             <li class="nav-item dropdown ms-2">

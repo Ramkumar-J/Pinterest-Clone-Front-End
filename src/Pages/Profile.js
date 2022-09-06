@@ -5,13 +5,13 @@ function Profile() {
   return (
     <div className="container p-0 profile">
       <img
-        className="img-fluid mt-0 mb-0  mx-auto profile-cover"
-        src="https://media.istockphoto.com/photos/pink-sunset-picture-id1139149089?b=1&k=20&m=1139149089&s=170667a&w=0&h=LcJIu-j_k0mz6ItmKawPuoRiBmuSivvGAEHkf98cfdQ="
+        className="img-fluid mt-0 mb-0 bg-secondary mx-auto profile-cover"
+        src="assets/Profile-cover.jpg"
         alt="profile cover photo"
       ></img>
       <img
-        class="img-fluid user-pic"
-        src="https://img.icons8.com/fluency/100/test-account.png"
+        className="img-fluid user-pic"
+        src="assets/Profile-picture.png"
       ></img>
 
       <h2 className="fw-bolder mt-2">Ramkumar</h2>

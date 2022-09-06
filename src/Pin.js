@@ -1,136 +1,49 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useFormik } from "formik";
-import axios from "axios";
-import Navbar from "./Navbar";
+import React from "react";
+import { Link } from "react-router-dom";
 
-function Pin() {
-  let navigate = useNavigate();
-  let formik = useFormik({
-    initialValues: {
-      image: "",
-      title: "",
-      about: "",
-      link: "",
-    },
-    validate: (values) => {
-      const errors = {};
-      if (!values.image) {
-        errors.image = "Image is required";
-      }
-      return errors;
-    },
-    onSubmit: async (values) => {
-      try {
-        await axios.post("https://pinterest-clone-nodeapp.herokuapp.com/createpin", values, {
-          headers: {
-            Authorization: window.localStorage.getItem("pinteresttoken"),
-          },
-        });
-        navigate("/home");
-      } catch (error) {
-        console.log(error);
-        alert("something went wrong");
-      }
-    },
-  });
-
-  return (
-      <div className="container-fluid p-0 pin-bg">
-        <div className="row">
-          <div className="col-lg-12">
-            <div className="row mt-5">
-              <div className="col-lg-3"></div>
-              {/* Create pin area */}
-              <div className="col-lg-6">
-                <div class="row mt-3">
-                  <div className="col-lg-12">
-                    <h5 className="fw-bolder">Create a Pin</h5>
-                  </div>
-                </div>
-                <div class="pin-container bg-light p-3 rounded">
-                  <form onSubmit={formik.handleSubmit}>
-                    <div class="row mt-2">
-                        {/* Leftside */}
-                      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                        <div class="row mt-3">
-                          <div class="col-lg-12">
-                            <label>Upload image link here</label>
-                            <input
-                              type={"text"}
-                              className="form-control mt-2"
-                              accept="image/*"
-                              name="image"
-                              onChange={formik.handleChange}
-                              value={formik.values.image}
-                            ></input>
-                            <span style={{ color: "red" }}>
-                              {formik.errors.image}
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      {/* Rightside */}
-                      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                        <div class="row mt-3">
-                          <div class="col-lg-12">
-                            <label>Title</label>
-                            <input
-                              class="form-control mt-2 fw-bolder input-box"
-                              type={"text"}
-                              placeholder="Add a Title"
-                              name="title"
-                              onChange={formik.handleChange}
-                              value={formik.values.title}
-                            ></input>
-                          </div>
-                        </div>
-                        <div class="row mt-4">
-                          <div class="col-lg-12">
-                            <label>About pin</label>
-                            <textarea
-                              class="form-control mt-3 w-100"
-                              rows="1"
-                              type={"text"}
-                              placeholder="Tell everyone what is your pin about"
-                              name="about"
-                              onChange={formik.handleChange}
-                              value={formik.values.about}
-                            ></textarea>
-                          </div>
-                        </div>
-                        <div class="row mt-5">
-                          <div class="col-lg-12">
-                            <label>Link</label>
-                            <input
-                              class="form-control mt-3 fs-5 fw-light input-box"
-                              type={"text"}
-                              placeholder="Add a destination link"
-                              name="link"
-                              onChange={formik.handleChange}
-                              value={formik.values.link}
-                            ></input>
-                          </div>
-                        </div>
-                        <div class="row mt-5">
-                          <div class="col-lg-12">
-                            <input
-                              class="form-control w-25 btn btn-danger btn-small"
-                              type={"submit"}
-                              value="Save"
-                            ></input>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
+function Pin(props){
+    return(
+        <div class="pin">
+        <div class="image-container">
+          <img
+            class="bg-danger pin-image"
+            src={props.pin.image}
+            alt="Image"
+          />
+          <div class="pin-content">
+            <a href={props.pin.image} download>
+              <img
+                class="me-5 rounded-circle p-1 pin-icon"
+                src="https://img.icons8.com/external-ayo-icons-royyan-wijaya/25/external-arrow-arrow-line-ayo-icons-royyan-wijaya-2.png"
+                alt=""
+              />
+            </a>
+            <Link to={`/viewpin/${props.pin._id}`}>
+              <img
+                class="rounded-circle p-1 pin-icon"
+                src="https://img.icons8.com/external-icongeek26-outline-icongeek26/25/external-view-graphic-design-icongeek26-outline-icongeek26.png"
+                alt=""
+              />
+            </Link>
           </div>
         </div>
+        <button
+          class="btn btn-danger rounded-pill pin-button"
+          onClick={() => props.Addsavedpin(props.pin)}
+          disabled={props.Savedpins.some(
+            (obj) => obj._id === props.pin._id
+          )}
+        >
+          Save
+        </button>
+        <h5 className="mt-1 fw-bolder">{props.pin.title}</h5>
+        <img
+          class="img-fluid me-2 user-image"
+          src="https://i.pinimg.com/75x75_RS/e9/f7/e1/e9f7e101e3b7484d53b2b4d5a6004740.jpg"
+        ></img>
+        <span>{props.pin.about}</span>
       </div>
-  );
+    )
 }
 
 export default Pin;

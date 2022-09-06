@@ -1,9 +1,11 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Home from "./Pages/Home";
 import Navbar from "./Navbar";
-function ViewPin(props) {
+import PinContext from "./PinContext";
+function ViewPin() {
+  const {savepin,setSavepin} = useContext(PinContext);
   let params = useParams();
   let [view, setView] = useState([]);
   useEffect(() => {
@@ -25,6 +27,10 @@ function ViewPin(props) {
     }
     getview();
   }, []);
+
+  let Addsavedpin= (pin) => {
+    setSavepin([...savepin,pin]);
+ }
 
   let comment = () => {
     let list = document.createElement("list");
@@ -73,7 +79,7 @@ function ViewPin(props) {
               <div className="col-6 col-sm-6 col-md-6 col-lg-6">
                 <button
                   class="btn btn-danger rounded-pill"
-                  onClick={() => props.Addsavedpin(view)}
+                  onClick={() => Addsavedpin(view)}
                 >
                   Save
                 </button>

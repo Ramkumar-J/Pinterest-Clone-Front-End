@@ -1,12 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import PinContext from "./PinContext";
 
-function SavedPin(props) {
+function SavedPin() {
+  const {savepin,setSavepin} = useContext(PinContext);
+  let Removesavedpin = (pin) => {
+    let index=savepin.findIndex((e) => pin._id === e._id);
+    savepin.splice(index,1);
+    setSavepin([...savepin]);
+  }
   return (
     <div className="container">
       <h1 className="text-primary text-center fw-bold mt-3">Saved Pins</h1>
       <div class="gallary mt-4">
-        {props.Savedpins.map((savedpin) => {
+        {savepin.map((savedpin) => {
           return (
             <div class="pin">
               <div class="image-container">
@@ -24,7 +31,7 @@ function SavedPin(props) {
               </div>
               <button
                 class="btn btn-danger rounded-pill pin-button"
-                onClick={() => props.Removesavedpin(savedpin)}
+                onClick={() => Removesavedpin(savedpin)}
               >
                 Unsave
               </button>
