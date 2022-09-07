@@ -67,8 +67,13 @@ function Login() {
                 value={formik.values.password}
               ></input>
               <span style={{ color: "red" }}>{formik.errors.password}</span>
-              <p class="mt-2 mb-0 fw-bolder content">
+              <p class="mt-2 mb-0 fw-bolder login-content">
                 Don't forgot your password?
+              </p>
+              <p class="mt-2 mb-0 fw-bolder login-content">
+                For Demo,<br></br>
+                Email: user@gmail.com<br></br>
+                Password: user@123
               </p>
               <input
                 class="form-control btn btn-danger rounded-pill text-center mt-4"
