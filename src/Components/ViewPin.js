@@ -1,9 +1,7 @@
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Home from "./Pages/Home";
-import Navbar from "./Navbar";
-import PinContext from "./PinContext";
+import PinContext from "../Context/PinContext";
 function ViewPin() {
   const {savepin,setSavepin} = useContext(PinContext);
   let params = useParams();
@@ -56,6 +54,7 @@ function ViewPin() {
     }
     document.getElementById("myInput").value = " ";
   };
+
   return (
       <div className="container p-0 view-pin">
         <div className="row mt-3 mb-5">

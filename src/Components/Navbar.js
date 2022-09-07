@@ -10,10 +10,7 @@ function Navbar() {
 
   return (
     <header class="mt-2">
-      {/* <div>
-      <h1>Pinterest</h1>
-      </div> */}
-      <nav class="navbar navbar-expand-md navbar-light text-dark fw-bolder bg-transparant one">
+      <nav class="navbar navbar-expand-md navbar-light text-dark bg-transparant">
         <Link class="navbar-brand ms-4 icon-effect" to="/home">
           <img src="https://img.icons8.com/color/40/pinterest--v1.png"></img>
         </Link>

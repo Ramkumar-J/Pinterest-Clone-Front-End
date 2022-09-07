@@ -34,11 +34,11 @@ function Signup() {
     },
   });
   return (
-    <div class="container-fluid contain-size login-bg">
-      <div class="card card-size">
+    <div class="container-fluid signup-container signup-bg">
+      <div class="card signup-card">
         <div class="card-body text-white">
           <img
-            class="img-fluid logo"
+            class="img-fluid signup-logo"
             src="./assets/icons8-pinterest-color-32.png"
           ></img>
           <h1 class="fs-2 fw-bolder mt-2">Welcome to Pinterest</h1>
@@ -48,7 +48,7 @@ function Signup() {
               Email
             </label>
             <input
-              class="form-control mt-1 mb-1 rounded-pill in-box"
+              class="form-control mt-1 mb-1 rounded-pill signup-input_box"
               type={"email"}
               name="email"
               id="email"
@@ -61,7 +61,7 @@ function Signup() {
               Password
             </label>
             <input
-              class="form-control mt-1 mb-1 rounded-pill in-box"
+              class="form-control mt-1 mb-1 rounded-pill signup-input_box"
               type={"password"}
               name="password"
               id="password"
@@ -74,7 +74,7 @@ function Signup() {
               User Name
             </label>
             <input
-              class="form-control mt-1 mb-1 rounded-pill in-box"
+              class="form-control mt-1 mb-1 rounded-pill signup-input_box"
               type={"text"}
               name="username"
               id="user"
@@ -88,26 +88,26 @@ function Signup() {
               value="Continue"
             ></input>
           </form>
-          <p class="mt-2 mb-0 text-center content">
+          <p class="mt-2 mb-0 text-center signup-content">
             By continuing, you agree to Pinterest's
           </p>
-          <p class="mb-0 mt-0 text-center content">
+          <p class="mb-0 mt-0 text-center signup-content">
             <a class="fw-bolder text-white" href="#">
               Terms of Service
             </a>{" "}
             acknowledge you've read our
           </p>
-          <p class="mb-0 mt-0 text-center content">
+          <p class="mb-0 mt-0 text-center signup-content">
             <a class="fw-bolder text-white" href="#">
               Privacy Policy
             </a>
           </p>
-          <p class="mt-2 text-center content">
+          <p class="mt-2 text-center signup-content">
             <Link class="fw-bolder text-white" to="/login">
               Already a member? Log in
             </Link>
           </p>
-          <p class="mt-2 text-center content">
+          <p class="mt-2 text-center signup-content">
             Are you a business?{" "}
             <a class="fw-bolder text-white" href="#">
               Get started here!

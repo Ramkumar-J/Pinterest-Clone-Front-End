@@ -1,6 +1,6 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import PinContext from "./PinContext";
+import PinContext from "../Context/PinContext";
 
 function SavedPin() {
   const {savepin,setSavepin} = useContext(PinContext);
