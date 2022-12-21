@@ -10,7 +10,7 @@ function ViewPin() {
     async function getview() {
       try {
         let pinview = await axios.get(
-          `https://pinterest-clone-nodeapp.herokuapp.com/viewpin/${params.id}`,
+          `https://pinterest-clone-backend.vercel.app/viewpin/${params.id}`,
           {
             headers: {
               Authorization: window.localStorage.getItem("pinteresttoken"),

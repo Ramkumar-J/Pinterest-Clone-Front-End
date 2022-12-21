@@ -23,7 +23,7 @@ function Signup() {
     onSubmit: async (values) => {
       try {
         await axios.post(
-          "https://pinterest-clone-nodeapp.herokuapp.com/signup",
+          "https://pinterest-clone-backend.vercel.app/signup",
           values
         );
         navigate("/login");

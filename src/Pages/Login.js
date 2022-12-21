@@ -23,7 +23,7 @@ function Login() {
     onSubmit: async (values) => {
       try {
         let loginData = await axios.post(
-          "https://pinterest-clone-nodeapp.herokuapp.com/login",
+          "https://pinterest-clone-backend.vercel.app/login",
           values
         );
         window.localStorage.setItem("pinteresttoken", loginData.data.token);

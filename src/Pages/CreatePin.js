@@ -22,7 +22,7 @@ function CreatePin() {
     onSubmit: async (values) => {
       try {
         await axios.post(
-          "https://pinterest-clone-nodeapp.herokuapp.com/createpin",
+          "https://pinterest-clone-backend.vercel.app/createpin",
           values,
           {
             headers: {

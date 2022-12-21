@@ -10,7 +10,7 @@ function Home() {
     async function getPin() {
       try {
         let pinData = await axios.get(
-          "https://pinterest-clone-nodeapp.herokuapp.com/home",
+          "https://pinterest-clone-backend.vercel.app/home",
           {
             headers: {
               Authorization: window.localStorage.getItem("pinteresttoken"),
