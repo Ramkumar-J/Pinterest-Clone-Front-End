@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../Components/Navbar";
 import TodayPin from "../Components/TodayPin";
 
 function Today() {
   return (
+    <>
+    <Navbar></Navbar>
     <div className="container text-center">
       <h1 className="mt-2">Today's Inspiration</h1>
       <h4 className="mt-2">September 5,2022</h4>
@@ -18,6 +21,7 @@ function Today() {
         Go to home feed
       </Link>
     </div>
+    </>
   );
 }
 

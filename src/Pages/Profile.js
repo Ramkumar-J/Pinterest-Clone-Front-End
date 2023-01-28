@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../Components/Navbar";
 
 function Profile() {
   return (
+    <>
+    <Navbar></Navbar>
     <div className="container p-0 profile">
       <img
         className="img-fluid mt-0 mb-0 bg-secondary mx-auto profile-cover"
@@ -21,6 +24,7 @@ function Profile() {
         <Link to="/savedpins">Saved Pins</Link>
       </p>
     </div>
+    </>
   );
 }
 

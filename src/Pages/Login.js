@@ -2,6 +2,7 @@ import axios from "axios";
 import { useFormik } from "formik";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import LandingHeader from "../Components/LandingHeader";
 
 function Login() {
   let navigate = useNavigate();
@@ -36,13 +37,16 @@ function Login() {
   });
   return (
     <>
-      <div class="container-fluid signup-container signup-bg">
+    <LandingHeader></LandingHeader>
+      <div class="container-fluid signup-container">
         <div class="card signup-card">
-          <div class="card-body mt-2 text-white">
+          <div class="card-body mt-2 text-dark">
+          <div className="signup-logo-container">
             <img
               class="img-fluid signup-logo"
-              src="./assets/icons8-pinterest-color-32.png"
+              src="https://img.icons8.com/color/40/pinterest--v1.png"
             ></img>
+            </div>
             <h1 class="fs-2 fw-bolder mt-3 mb-3">Welcome to Pinterest</h1>
             <form onSubmit={formik.handleSubmit}>
               <label className="ms-2">Email</label>
@@ -85,25 +89,25 @@ function Login() {
               By continuing, you agree to Pinterest's
             </p>
             <p class="mb-0 mt-0 text-center login-content">
-              <a class="fw-bolder text-white" href="#">
+              <a class="fw-bolder text-dark" href="#">
                 Terms of Service
               </a>{" "}
               acknowledge you've read our
             </p>
             <p class="mb-0 mt-0 text-center login-content">
-              <a class="fw-bolder text-white" href="#">
+              <a class="fw-bolder text-dark" href="#">
                 Privacy Policy
               </a>
             </p>
             <hr class="w-50 mx-auto"></hr>
             <p class="mt-2 text-center login-content">
-              <Link class="fw-bolder text-white" to="/signup">
+              <Link class="fw-bolder text-dark" to="/signup">
                 Not on Pinterest yet? Sign up
               </Link>
             </p>
             <p class="mt-2 text-center contentlogin-content">
               Are you a business?{" "}
-              <a class="fw-bolder text-white" href="#">
+              <a class="fw-bolder text-dark" href="#">
                 Get started here!
               </a>
             </p>

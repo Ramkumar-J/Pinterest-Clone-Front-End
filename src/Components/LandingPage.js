@@ -1,43 +1,35 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import LandingHeader from "../Components/LandingHeader";
 function LandingPage() {
   return (
-    <header>
-      <nav className="navbar navbar-expand-lg bg-transparant mt-2">
-        <Link className="navbar-brand ms-4 fw-bolder brand" to="/">
-          <img src="./assets/icons8-pinterest-color-32.png"></img>
-          Pinterest
-        </Link>
-        <button
-          className="navbar-toggler text-dark"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#subNavBar"
-        >
-          <span className="navbar-toggler-icon text-dark bg-secondary"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="subNavBar">
-          <ul className="navbar-nav ms-auto fw-bolder me-3 ms-5 fs-6">
-            <li className="nav-item ms-2">
-              <Link
-                className="nav-link bg-danger rounded-pill text-white p-2"
-                to="/login"
-              >
-                Log in
-              </Link>
-            </li>
-            <li className="nav-item ms-2">
-              <Link
-                className="nav-link bg-secondary bg-opacity-25 rounded-pill text-dark p-2"
-                to="/signup"
-              >
-                Sign up
-              </Link>
-            </li>
-          </ul>
+    <>
+    <LandingHeader></LandingHeader>
+    <div className='container-fluid landing-bg'>
+        <div className='row'>
+            <div className='col-sm-12 col-md-8 col-lg-6 col-xl-6 col-xxl-6 p-0 m-0 landing-img-container'>
+                <div className='landing-mainimg'>
+                <img className='img-fluid' src="https://s.pinimg.com/webapp/shop-bd0c8a04.png"></img>
+                <div className='landing-subimg'>
+                <img className='img-fluid ' src="https://s.pinimg.com/webapp/creator-pin-img-491ebb56.png"></img>
+                <div className='text-center text-white'>
+                <p className='mb-0 fw-bolder city'>Scout the City</p>
+                <p className='followers'>56.7k followers</p>
+                </div>
+                <div className='landing-lastimg'>
+                <img className='img-fluid' src="https://s.pinimg.com/webapp/creator-avatar-d7a05622.png"></img>
+                </div>
+                </div>
+                </div>
+           </div>
+            <div className='col-sm-12 col-md-4 col-lg-6 col-xl-6 col-xxl-6 landing-content-container'>
+                <p className='text-danger text-center landing-main-content'>See it, make it, try it, do it</p>
+                <p className='text-danger text-center fs-4 landing-sub-content'>The best part of Pinterest is discovering new things and ideas from people around the world.</p>
+                <button className='btn btn-danger rounded-pill text-white'>Explore</button>
+            </div>
         </div>
-      </nav>
-    </header>
-  );
+    </div>
+    </>
+  )
 }
+
 export default LandingPage;

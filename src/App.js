@@ -15,6 +15,8 @@ import CreatePin from "./Pages/CreatePin";
 import Today from "./Pages/Today";
 import TodayPin from "./Components/TodayPin";
 import { PinProvider } from "./Context/PinContext";
+import LandingHeader from "./Components/LandingHeader";
+import LandingPage from "./Components/LandingPage";
 
 function App() {
   const savedPins = JSON.parse(
@@ -30,10 +32,11 @@ function App() {
   return (
     <PinProvider value={{ pins, setPins, savepin, setSavepin }}>
       <BrowserRouter>
-        <Navbar></Navbar>
+        {/* <Navbar></Navbar> */}
         <div className="container-fluid p-0">
           <Routes>
-            <Route path="/" element={<Signup />} />
+          <Route path="/" element={<LandingPage />} />
+            {/* <Route path="/" element={<Signup />} /> */}
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
             <Route path="/home" element={<Home />} />

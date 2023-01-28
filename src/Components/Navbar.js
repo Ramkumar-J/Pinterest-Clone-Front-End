@@ -74,12 +74,12 @@ function Navbar() {
             ></input> */}
           {/* </form> */}
           <ul class="navbar-nav ms-auto me-2">
-            <li class="nav-item ms-2 icon-effect">
+            {/* <li class="nav-item ms-2 icon-effect">
               <Link class="nav-link" to="/profile">
                 <i class="bi bi-person-circle fs-4"></i>
               </Link>
-            </li>
-            <li className="nav-item">
+            </li> */}
+            {/* <li className="nav-item">
               <button className="btn btn-sm">
                 <Link
                   className="nav-link bg-success rounded-pill fs-6 text-white fw-bold p-2"
@@ -98,8 +98,8 @@ function Navbar() {
                   Sign up
                 </Link>
               </button>
-            </li>
-            {/* <li class="nav-item me-1 icon-effect">
+            </li> */}
+            <li class="nav-item me-1 icon-effect">
               <a class="nav-link" href="#">
                 <i class="bi bi-bell-fill fs-4"></i>
               </a>
@@ -108,12 +108,12 @@ function Navbar() {
               <a class="nav-link" href="#">
                 <i class="bi bi-chat-dots-fill fs-4"></i>
               </a>
-            </li> */}
-            {/* <li class="nav-item me-1 icon-effect">
+            </li>
+            <li class="nav-item me-1 icon-effect">
               <Link class="nav-link" to="/profile">
                 <i class="bi bi-person-circle fs-4"></i>
               </Link>
-            </li> */}
+            </li>
             <li className="nav-item ms-2 mt-1">
               <button
                 className="btn btn-danger btn-sm rounded-pill text-white p-2 fw-bold fs-6"

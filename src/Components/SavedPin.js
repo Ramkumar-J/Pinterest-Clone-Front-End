@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import PinContext from "../Context/PinContext";
+import Navbar from "./Navbar";
 
 function SavedPin() {
   const {savepin,setSavepin} = useContext(PinContext);
@@ -10,6 +11,8 @@ function SavedPin() {
     setSavepin([...savepin]);
   }
   return (
+    <>
+    <Navbar></Navbar>
     <div className="container">
       <h1 className="text-primary text-center fw-bold mt-3">Saved Pins</h1>
       <div class="gallary mt-4">
@@ -46,6 +49,7 @@ function SavedPin() {
         })}
       </div>
     </div>
+    </>
   );
 }
 

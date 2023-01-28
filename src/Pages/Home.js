@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
+import Navbar from "../Components/Navbar";
 import Pin from "../Components/Pin";
 import PinContext from "../Context/PinContext";
 
@@ -31,7 +32,7 @@ function Home() {
 
   return (
     <>
-      {/* <Navbar></Navbar> */}
+      <Navbar></Navbar>
       {pins.length > 0 ? (
         <div className="container-fluid">
           <input

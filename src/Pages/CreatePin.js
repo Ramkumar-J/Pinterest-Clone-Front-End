@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import axios from "axios";
+import Navbar from "../Components/Navbar";
 
 function CreatePin() {
   let navigate = useNavigate();
@@ -39,6 +40,8 @@ function CreatePin() {
   });
 
   return (
+    <>
+    <Navbar></Navbar>
     <div className="container-fluid p-0 pin-bg">
       <div className="row">
         <div className="col-lg-12">
@@ -133,6 +136,7 @@ function CreatePin() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

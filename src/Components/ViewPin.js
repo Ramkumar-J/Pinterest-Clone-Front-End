@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import PinContext from "../Context/PinContext";
+import Navbar from "./Navbar";
 function ViewPin() {
   const {savepin,setSavepin} = useContext(PinContext);
   let params = useParams();
@@ -56,6 +57,8 @@ function ViewPin() {
   };
 
   return (
+    <>
+    <Navbar></Navbar>
       <div className="container p-0 view-pin">
         <div className="row mt-3 mb-5">
           <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
@@ -125,6 +128,7 @@ function ViewPin() {
           </div>
         </div>
       </div>
+      </>
   );
 }
 
