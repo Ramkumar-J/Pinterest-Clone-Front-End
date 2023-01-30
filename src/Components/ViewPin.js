@@ -73,8 +73,8 @@ function ViewPin() {
                 <a href={view.image} download>
                   <img
                     class="ms-2 rounded-circle p-1"
-                    src="https://img.icons8.com/pastel-glyph/40/download.png"
-                    alt=""
+                    src="./assets/home_pin_logo.jpg"
+                    alt="Pin user logo"
                   />
                 </a>
               </div>

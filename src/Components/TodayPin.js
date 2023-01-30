@@ -30,17 +30,17 @@ function TodayPin() {
   ];
   return (
     <div className="container text-center">
-      {/* <h4 className="mt-2">September 5,2022</h4> */}
       <div className="row mt-4 mb-4">
         {todayList.map((todaypin) => {
           return (
             <>
-              <div className="col-lg-6 mb-3">
-                <div className="card today-card">
+              <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 mb-3">
+                <div className="today-card">
                   <div className="card-top">
                       <img
-                        className="img-fluid today-image"
+                        className="today-image"
                         src={todaypin.image}
+                        height={200}
                       ></img>
                   </div>
                   <p className="card-text mt-3 mb-0 fw-bolder">

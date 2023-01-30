@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-function LandingPage() {
+function LandingHeader() {
   return (
     <header>
-      <nav className="navbar navbar-expand-lg bg-transparant mt-2">
-        <Link className="navbar-brand text-danger ms-4 fw-bolder brand" to="/">
-          <img src="./assets/icons8-pinterest-color-32.png"></img>
+      <nav className="navbar navbar-expand-md bg-transparant navbar-light mt-2">
+        <Link className="navbar-brand text-danger ms-4 fw-bolder" to="/">
+          <img src="./assets/icons8-pinterest-color-32.png" alt="Pinterest Logo"></img>
           Pinterest
         </Link>
         <button
@@ -14,31 +14,22 @@ function LandingPage() {
           data-bs-toggle="collapse"
           data-bs-target="#subNavBar"
         >
-          <span className="navbar-toggler-icon text-dark bg-secondary"></span>
+          <span className="navbar-toggler-icon text-primary"></span>
         </button>
         <div className="collapse navbar-collapse" id="subNavBar">
           <ul className="navbar-nav ms-auto fw-bolder me-3 ms-5">
-          <li class="nav-item ms-2">
-              <Link
-                class="nav-link text-dark navlink"
-                to="#"
-              >
+            <li class="nav-item ms-3">
+              <Link class="nav-link text-dark navlink" to="#">
                 About
               </Link>
             </li>
             <li class="nav-item ms-3">
-              <Link
-                class="nav-link text-dark navlink"
-                to="#"
-              >
+              <Link class="nav-link text-dark navlink" to="#">
                 Bussiness
               </Link>
             </li>
             <li class="nav-item ms-3">
-              <Link
-                class="nav-link text-dark navlink"
-                to="#"
-              >
+              <Link class="nav-link text-dark navlink" to="#">
                 Blog
               </Link>
             </li>
@@ -64,4 +55,4 @@ function LandingPage() {
     </header>
   );
 }
-export default LandingPage;
+export default LandingHeader;

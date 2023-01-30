@@ -7,12 +7,11 @@ function Navbar() {
     window.localStorage.removeItem("pinteresttoken");
     navigate("/");
   };
-
   return (
     <header class="mt-2">
       <nav class="navbar navbar-expand-md navbar-light text-dark bg-transparant">
         <Link class="navbar-brand ms-4 icon-effect" to="/home">
-          <img src="https://img.icons8.com/color/40/pinterest--v1.png"></img>
+          <img src="./assets/pinterest_login_logo.png" alt="Pinterest Logo"></img>
         </Link>
         <button
           class="navbar-toggler"
@@ -101,20 +100,20 @@ function Navbar() {
             </li> */}
             <li class="nav-item me-1 icon-effect">
               <a class="nav-link" href="#">
-                <i class="bi bi-bell-fill fs-4"></i>
+                <i class="bi bi-bell-fill fs-4 ms-2 me-2"></i>
               </a>
             </li>
             <li class="nav-item me-1 icon-effect">
               <a class="nav-link" href="#">
-                <i class="bi bi-chat-dots-fill fs-4"></i>
+                <i class="bi bi-chat-dots-fill fs-4 ms-2 me-2"></i>
               </a>
             </li>
             <li class="nav-item me-1 icon-effect">
               <Link class="nav-link" to="/profile">
-                <i class="bi bi-person-circle fs-4"></i>
+                <i class="bi bi-person-circle fs-4 ms-2 me-2"></i>
               </Link>
             </li>
-            <li className="nav-item ms-2 mt-1">
+            <li className="nav-item ms-2 me-2 mt-1">
               <button
                 className="btn btn-danger btn-sm rounded-pill text-white p-2 fw-bold fs-6"
                 onClick={handleLogout}

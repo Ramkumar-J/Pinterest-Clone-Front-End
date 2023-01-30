@@ -51,7 +51,7 @@ function CreatePin() {
             <div className="col-lg-6">
               <div class="row mt-3">
                 <div className="col-lg-12">
-                  <h5 className="fw-bolder">Create a Pin</h5>
+                  <h5 className="fw-bolder ms-3">Create a Pin</h5>
                 </div>
               </div>
               <div class="pin-container bg-light p-3 rounded">

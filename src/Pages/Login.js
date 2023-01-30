@@ -37,17 +37,18 @@ function Login() {
   });
   return (
     <>
-    <LandingHeader></LandingHeader>
+      <LandingHeader></LandingHeader>
       <div class="container-fluid signup-container">
-        <div class="card signup-card">
-          <div class="card-body mt-2 text-dark">
-          <div className="signup-logo-container">
-            <img
-              class="img-fluid signup-logo"
-              src="https://img.icons8.com/color/40/pinterest--v1.png"
-            ></img>
+        <div class="signup-card">
+          <div class="signup-card-body">
+            <div className="signup-logo-container">
+              <img
+                class="img-fluid signup-logo"
+                src="./assets/pinterest_login_logo.png"
+                alt="Pinterest Logo"
+              ></img>
             </div>
-            <h1 class="fs-2 fw-bolder mt-3 mb-3">Welcome to Pinterest</h1>
+            <h1 class="fs-2 fw-bolder text-center mt-3 mb-3">Welcome to Pinterest</h1>
             <form onSubmit={formik.handleSubmit}>
               <label className="ms-2">Email</label>
               <input
@@ -105,7 +106,7 @@ function Login() {
                 Not on Pinterest yet? Sign up
               </Link>
             </p>
-            <p class="mt-2 text-center contentlogin-content">
+            <p class="mt-2 text-center login-content">
               Are you a business?{" "}
               <a class="fw-bolder text-dark" href="#">
                 Get started here!

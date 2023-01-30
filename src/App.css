@@ -51,20 +51,32 @@
   width: 100%;
   height: 100vh;
 }
-
 .landing-main-content{
-  font-size: 60px;
-  font-weight: bold;
-  /* text-align: center; */
+width: 450px;
+font-size: 60px;
+color: rgb(195, 47, 0);
+font-weight: bold;
+text-align: center;
 }
-/* Navbar */
-.icon-effect:hover {
-  background-color: rgb(224, 221, 221);
+.landing-sub-content{
+  max-width: 450px;
+font-size: 24px;
+color: rgb(195, 47, 0);
+text-align: center;
 }
-.nav-effect:hover {
-  background-color: black;
-  color: white !important;
+.explore-btn{
+ height: 48px;
+width: 93px;
+background: rgb(195, 47, 0);
+border-radius: 30px;
+border: none;
+}
+.explore-btn-text{
+  color: rgb(255, 223, 233);
+  font-size: 16px;
   text-align: center;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /* Signup Page and Login Page */
@@ -72,24 +84,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://www.befunky.com/images/wp/wp-2017-10-Pinterest-Pins-19.jpg?auto=avif,webp&format=jpg&width=944");
 }
 .signup-card {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 500px; */
   width: 500px;
-  background-color: transparent !important;
-  border-radius: 10% !important;
+  background-color: white;
+  border-radius: 20px;
+  margin: 20px 0px 20px 0px;
 }
 .signup-logo-container{
   text-align: center;
-}
-/* .signup-logo {
-  margin-left: 150px;
   margin-top: 20px;
-  height: 40px !important;
-} */
+}
 .signup-input_box {
   height: 48px;
   width: 250px;
@@ -98,13 +107,24 @@
   font-size: 13px;
 }
 
-.signup-bg{
+/* .signup-bg{
   background: rgba(0,0,0,0.6) url("https://cdn.wallpapersafari.com/46/34/Mxjr2p.jpg");
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0;
   background-blend-mode: darken;
+} */
+
+/* Navbar */
+.icon-effect:hover {
+  background-color: rgb(224, 221, 221);
+  border-radius: 50%;
+}
+.nav-effect:hover {
+  background-color: black;
+  color: white !important;
+  text-align: center;
 }
 
 /* Home page */
@@ -125,21 +145,20 @@
   height: 100%;
   border-radius: 5%;
   opacity:1;
+  cursor: zoom-in;
 }
 .pin-image:hover{
  opacity: 0.5;
 }
-.user-image {
-  width: 30px !important;
-  height: 30px !important;
-  border-radius: 50%;
-}
 .pin-icon{
   position:absolute;
-  bottom:70px;
+  bottom:10px;
   right:10px;
   background-color: rgb(163, 162, 162);
   opacity: 0.3;
+  font-size: 18px;
+  padding: 3px 7px 3px 7px;
+  color: black;
 }
 .pin-button{
   position:absolute;
@@ -154,12 +173,11 @@
 .pin-button:hover{
   opacity: 1;
 }
-.image-container{
+.pin-image-container{
   opacity:1
 }
-.image-container:hover{
+.pin-image-container:hover{
   opacity:0.8;
-  cursor: zoom-in;
 }
 @media (max-width:1200px){
   .gallary{
@@ -192,7 +210,7 @@
     position:absolute;
     height: 70px ;
     width: 70px ;
-    bottom:200px;
+    top:175px;
     left: -50px;
   }
   .city{
@@ -202,7 +220,23 @@
     font-size: 10px;
   }
   .landing-main-content{
+    width: 300px;
     font-size: 40px;
+  }
+  .view-pin{
+    /* height: auto;
+    background-color: rgb(248, 248, 248);
+    border-radius:20px;
+    box-shadow:10px 10px 10px rgb(56, 56, 56); */
+    width: 325px !important;
+  }
+  
+  .viewpin-image{
+    /* border-top-left-radius: 20px; */
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px !important;
+    /* height:400px !important;
+    width: 300px !important; */
   }
 }
 @media (max-width:0px){
@@ -214,13 +248,13 @@
 
 /* Today page */
 .today-card{
-  border-radius: 30px !important;
+  border-radius: 30px;
+  border: 1px solid lightgray;
 }
 
 .today-image{
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  height: 200px !important;
   width: 100%;
 }
 
@@ -264,21 +298,27 @@ textarea {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   border-radius: 20px;
-  text-align: center;
-  box-shadow:10px 10px 10px rgb(56, 56, 56);
+  /* text-align: center; */
+  /* box-shadow:10px 10px 10px rgb(56, 56, 56); */
 }
-.profile-cover{
-  border-top-left-radius:20px;
-  border-top-right-radius:20px;
-  height: 300px !important;
-  width:100%; 
+.username-pic{
+  padding: 40px;
+  background-color: rgb(233, 233, 233);
+  font-weight: bold;
+  font-size: 50px;
+  border-radius: 50%;
+  /* width: 100px; */
 }
-.user-pic{
-  width: 100px !important;
-  margin-left:45%;
-  margin-top: -55px;
+.profile-btn{
+   padding: 15px;
+   background-color:rgb(239, 239, 239) ;
+   font-weight: bold;
+   border-radius: 45%;
+   border: none;
+   margin: 10px;
 }
 .profile-stick{
   position: sticky;
