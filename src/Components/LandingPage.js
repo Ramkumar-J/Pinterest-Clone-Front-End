@@ -5,20 +5,20 @@ function LandingPage() {
   return (
     <>
       <LandingHeader></LandingHeader>
-      <div className="container-fluid landing-bg">
+      <section className="container-fluid landing-bg">
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 p-0 m-0 landing-img-container">
             <div className="landing-mainimg">
               <img
                 className="img-fluid"
                 src="./assets/landing_img_1.png"
-                alt="Lipshade_1"
+                alt="Lipshade Image-1"
               ></img>
               <div className="landing-subimg">
                 <img
                   className="img-fluid "
                   src="./assets/landing_img_2.png"
-                  alt="Lipshade_2"
+                  alt="Lipshade Image-2"
                 ></img>
                 <div className="text-center text-white">
                   <p className="mb-0 fw-bolder city">Scout the City</p>
@@ -28,7 +28,7 @@ function LandingPage() {
                   <img
                     className="img-fluid"
                     src="./assets/landing_img_3.png"
-                    alt="Lipshade_3"
+                    alt="Lipshade Image-3"
                   ></img>
                 </div>
               </div>
@@ -49,7 +49,7 @@ function LandingPage() {
             </button>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

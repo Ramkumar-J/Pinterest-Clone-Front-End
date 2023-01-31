@@ -1,7 +1,7 @@
 import React from 'react';
 import {useDropzone} from 'react-dropzone';
 
-function Basic(props) {
+function Basic() {
   const {acceptedFiles, getRootProps, getInputProps} = useDropzone();
   
   const files = acceptedFiles.map(file => (

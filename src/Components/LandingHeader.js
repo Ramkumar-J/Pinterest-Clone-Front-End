@@ -2,10 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 function LandingHeader() {
   return (
-    <header>
-      <nav className="navbar navbar-expand-md bg-transparant navbar-light mt-2">
+    <header className="mt-2 bg-transparant">
+      <nav className="navbar navbar-expand-md navbar-light">
         <Link className="navbar-brand text-danger ms-4 fw-bolder" to="/">
-          <img src="./assets/icons8-pinterest-color-32.png" alt="Pinterest Logo"></img>
+          <img
+            src="./assets/icons8-pinterest-color-32.png"
+            alt="Pinterest Logo"
+          ></img>
           Pinterest
         </Link>
         <button

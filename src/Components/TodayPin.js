@@ -29,7 +29,7 @@ function TodayPin() {
     },
   ];
   return (
-    <div className="container text-center">
+    <section className="container text-center">
       <div className="row mt-4 mb-4">
         {todayList.map((todaypin) => {
           return (
@@ -37,11 +37,12 @@ function TodayPin() {
               <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 mb-3">
                 <div className="today-card">
                   <div className="card-top">
-                      <img
-                        className="today-image"
-                        src={todaypin.image}
-                        height={200}
-                      ></img>
+                    <img
+                      className="today-image"
+                      src={todaypin.image}
+                      alt="Today Inspiration Image"
+                      height={200}
+                    ></img>
                   </div>
                   <p className="card-text mt-3 mb-0 fw-bolder">
                     {todaypin.subtitle}
@@ -55,7 +56,7 @@ function TodayPin() {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 }
 

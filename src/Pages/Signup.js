@@ -45,26 +45,26 @@ function Signup() {
   return (
     <>
       <LandingHeader></LandingHeader>
-      <div class="container-fluid signup-container">
-        <div class="signup-card">
-          <div class="signup-card-body">
+      <section className="container-fluid signup-container">
+        <div className="signup-card">
+          <div className="signup-card-body">
             <div className="signup-logo-container">
               <img
-                class="img-fluid signup-logo"
+                className="img-fluid signup-logo"
                 src="./assets/pinterest_login_logo.png"
                 alt="Pinterest Logo"
               ></img>
             </div>
-            <h1 class="fs-2 fw-bolder text-center mt-2">
+            <h1 className="fs-2 fw-bolder text-center mt-2">
               Welcome to Pinterest
             </h1>
-            <p class="text-center">Find new ideas to try</p>
+            <p className="text-center">Find new ideas to try</p>
             <form onSubmit={formik.handleSubmit}>
               <label className="ms-2" for="email">
                 Email
               </label>
               <input
-                class="form-control mt-1 mb-1 rounded-pill signup-input_box"
+                className="form-control mt-1 mb-1 rounded-pill signup-input_box"
                 type={"email"}
                 name="email"
                 id="email"
@@ -77,7 +77,7 @@ function Signup() {
                 Password
               </label>
               <input
-                class="form-control mt-1 mb-1 rounded-pill signup-input_box"
+                className="form-control mt-1 mb-1 rounded-pill signup-input_box"
                 type={"password"}
                 name="password"
                 id="password"
@@ -90,7 +90,7 @@ function Signup() {
                 Age
               </label>
               <input
-                class="form-control mt-1 mb-1 rounded-pill signup-input_box"
+                className="form-control mt-1 mb-1 rounded-pill signup-input_box"
                 type={"text"}
                 name="age"
                 id="age"
@@ -99,39 +99,39 @@ function Signup() {
                 value={formik.values.age}
               ></input>
               <input
-                class="form-control btn btn-danger rounded-pill text-center mt-2"
+                className="form-control btn btn-danger rounded-pill text-center mt-2"
                 type={"submit"}
                 value="Continue"
               ></input>
             </form>
-            <p class="mt-2 mb-0 text-center signup-content">
+            <p className="mt-2 mb-0 text-center signup-content">
               By continuing, you agree to Pinterest's
             </p>
-            <p class="mb-0 mt-0 text-center signup-content">
-              <a class="fw-bolder text-dark" href="#">
+            <p className="mb-0 mt-0 text-center signup-content">
+              <a className="fw-bolder text-dark" href="#">
                 Terms of Service
               </a>{" "}
               acknowledge you've read our
             </p>
-            <p class="mb-0 mt-0 text-center signup-content">
-              <a class="fw-bolder text-dark" href="#">
+            <p className="mb-0 mt-0 text-center signup-content">
+              <a className="fw-bolder text-dark" href="#">
                 Privacy Policy
               </a>
             </p>
-            <p class="mt-2 text-center signup-content">
-              <Link class="fw-bolder text-dark" to="/login">
+            <p className="mt-2 text-center signup-content">
+              <Link className="fw-bolder text-dark" to="/login">
                 Already a member? Log in
               </Link>
             </p>
-            <p class="mt-2 text-center signup-content">
+            <p className="mt-2 text-center signup-content">
               Are you a business?{" "}
-              <a class="fw-bolder text-dark" href="#">
+              <a className="fw-bolder text-dark" href="#">
                 Get started here!
               </a>
             </p>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

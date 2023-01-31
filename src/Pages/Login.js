@@ -38,21 +38,25 @@ function Login() {
   return (
     <>
       <LandingHeader></LandingHeader>
-      <div class="container-fluid signup-container">
-        <div class="signup-card">
-          <div class="signup-card-body">
+      <section className="container-fluid signup-container">
+        <div className="signup-card">
+          <div className="signup-card-body">
             <div className="signup-logo-container">
               <img
-                class="img-fluid signup-logo"
+                className="img-fluid signup-logo"
                 src="./assets/pinterest_login_logo.png"
                 alt="Pinterest Logo"
               ></img>
             </div>
-            <h1 class="fs-2 fw-bolder text-center mt-3 mb-3">Welcome to Pinterest</h1>
+            <h1 className="fs-2 fw-bolder text-center mt-3 mb-3">
+              Welcome to Pinterest
+            </h1>
             <form onSubmit={formik.handleSubmit}>
-              <label className="ms-2">Email</label>
+              <label className="ms-2" for="email">
+                Email
+              </label>
               <input
-                class="form-control mt-1 mb-1 rounded-pill signup-input_box"
+                className="form-control mt-1 mb-1 rounded-pill signup-input_box"
                 type={"email"}
                 name="email"
                 id="email"
@@ -61,9 +65,11 @@ function Login() {
                 value={formik.values.email}
               ></input>
               <span style={{ color: "red" }}>{formik.errors.email}</span>
-              <label className="ms-2">Password</label>
+              <label className="ms-2" for="password">
+                Password
+              </label>
               <input
-                class="form-control mt-1 mb-1 rounded-pill signup-input_box"
+                className="form-control mt-1 mb-1 rounded-pill signup-input_box"
                 type={"password"}
                 name="password"
                 id="password"
@@ -72,49 +78,49 @@ function Login() {
                 value={formik.values.password}
               ></input>
               <span style={{ color: "red" }}>{formik.errors.password}</span>
-              <p class="mt-2 mb-0 fw-bolder login-content">
+              <p className="mt-2 mb-0 fw-bolder login-content">
                 Don't forgot your password?
               </p>
-              <p class="mt-2 mb-0 fw-bolder login-content">
+              <p className="mt-2 mb-0 fw-bolder login-content">
                 For Demo,<br></br>
                 Email: user@gmail.com<br></br>
                 Password: user@123
               </p>
               <input
-                class="form-control btn btn-danger rounded-pill text-center mt-4"
+                className="form-control btn btn-danger rounded-pill text-center mt-4"
                 type={"submit"}
                 value="Log in"
               ></input>
             </form>
-            <p class="mt-2 mb-0 text-center login-content">
+            <p className="mt-2 mb-0 text-center login-content">
               By continuing, you agree to Pinterest's
             </p>
-            <p class="mb-0 mt-0 text-center login-content">
-              <a class="fw-bolder text-dark" href="#">
+            <p className="mb-0 mt-0 text-center login-content">
+              <a className="fw-bolder text-dark" href="#">
                 Terms of Service
               </a>{" "}
               acknowledge you've read our
             </p>
-            <p class="mb-0 mt-0 text-center login-content">
-              <a class="fw-bolder text-dark" href="#">
+            <p className="mb-0 mt-0 text-center login-content">
+              <a className="fw-bolder text-dark" href="#">
                 Privacy Policy
               </a>
             </p>
-            <hr class="w-50 mx-auto"></hr>
-            <p class="mt-2 text-center login-content">
-              <Link class="fw-bolder text-dark" to="/signup">
+            <hr className="w-50 mx-auto"></hr>
+            <p className="mt-2 text-center login-content">
+              <Link className="fw-bolder text-dark" to="/signup">
                 Not on Pinterest yet? Sign up
               </Link>
             </p>
-            <p class="mt-2 text-center login-content">
+            <p className="mt-2 text-center login-content">
               Are you a business?{" "}
-              <a class="fw-bolder text-dark" href="#">
+              <a className="fw-bolder text-dark" href="#">
                 Get started here!
               </a>
             </p>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

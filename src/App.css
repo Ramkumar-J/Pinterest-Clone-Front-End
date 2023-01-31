@@ -36,7 +36,6 @@
   top:275px;
   left: -60px;
 }
-
 .city{
   font-size: 16px;
 }
@@ -130,12 +129,13 @@ border: none;
 /* Home page */
 .gallary{
   columns:5;
-  column-gap: 5px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 .gallary .pin{
   max-width:100%;
   margin-left:10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   height: 100%;
   overflow: hidden;
   position: relative;
@@ -179,6 +179,94 @@ border: none;
 .pin-image-container:hover{
   opacity:0.8;
 }
+.question-icon{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: white;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 5px 10px 5px 10px;
+  border-radius: 50%;
+  box-shadow: 3px 3px 5px lightgray;
+}
+.question-icon:hover{
+  background-color: rgb(224, 221, 221);
+  cursor: pointer;
+}
+/* .user-image {
+  border-radius: 50%;
+} */
+/* Today page */
+.today-card{
+  border-radius: 30px;
+  border: 1px solid lightgray;
+}
+.today-image{
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  width: 100%;
+}
+.today-card:hover{
+  background-color: rgb(238, 238, 238);
+}
+
+/* Create Pin page */
+.pin-bg {
+  background-color: #e9e9e9;
+  height: 100%;
+}
+.input-box {
+  border: none;
+  border-bottom: 1px solid black;
+  height: 75px;
+  font-weight: 800;
+  font-size: 25px;
+  background-color: transparent;
+}
+textarea {
+  background-color: transparent;
+}
+
+/* Profile page */
+.profile{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.username-pic{
+  padding: 30px 40px 30px 40px;
+  background-color: rgb(233, 233, 233);
+  font-weight: bold;
+  font-size: 50px;
+  border-radius: 50%;
+}
+.profile-btn{
+   padding: 15px;
+   background-color:rgb(239, 239, 239) ;
+   font-weight: bold;
+   border-radius: 45%;
+   border: none;
+   margin: 10px;
+}
+.profile-stick{
+  position: sticky;
+  top: 0;
+}
+
+/* View Pin Image */
+.view-pin{
+  height: auto;
+  background-color: rgb(248, 248, 248);
+  border-radius:20px;
+  box-shadow:10px 10px 10px rgb(56, 56, 56);
+}
+.viewpin-image{
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
 @media (max-width:1200px){
   .gallary{
       columns:4;
@@ -192,6 +280,9 @@ border: none;
 @media (max-width:768px){
   .gallary{
       columns:2;
+  }
+  .icon-effect:hover {
+    border-radius: 10px;
   }
 }
 @media (max-width:576px){
@@ -223,112 +314,25 @@ border: none;
     width: 300px;
     font-size: 40px;
   }
+  .icon-effect:hover {
+    border-radius: 10px;
+  }
   .view-pin{
-    /* height: auto;
-    background-color: rgb(248, 248, 248);
-    border-radius:20px;
-    box-shadow:10px 10px 10px rgb(56, 56, 56); */
     width: 325px !important;
   }
-  
   .viewpin-image{
-    /* border-top-left-radius: 20px; */
     border-top-right-radius: 20px;
-    border-bottom-left-radius: 0px !important;
-    /* height:400px !important;
-    width: 300px !important; */
+    border-bottom-left-radius: 0px;
+    height: 400px !important;
   }
 }
 @media (max-width:0px){
   .gallary{
       columns:1;
   }
-
-}
-
-/* Today page */
-.today-card{
-  border-radius: 30px;
-  border: 1px solid lightgray;
-}
-
-.today-image{
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  width: 100%;
-}
-
-.today-card:hover{
-  background-color: rgb(238, 238, 238);
-}
-
-
-/* Create Pin page */
-.pin-bg {
-  background-color: #e9e9e9;
-  height: 100%;
-}
-.input-box {
-  border: none;
-  border-bottom: 1px solid black;
-  height: 75px;
-  font-weight: 800;
-  font-size: 25px;
-  background-color: transparent;
-}
-textarea {
-  background-color: transparent;
-}
-
-/* View Pin Image */
-.view-pin{
-  height: auto;
-  background-color: rgb(248, 248, 248);
-  border-radius:20px;
-  box-shadow:10px 10px 10px rgb(56, 56, 56);
-}
-
-.viewpin-image{
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
-
-/* Profile page */
-.profile{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  border-radius: 20px;
-  /* text-align: center; */
-  /* box-shadow:10px 10px 10px rgb(56, 56, 56); */
-}
-.username-pic{
-  padding: 40px;
-  background-color: rgb(233, 233, 233);
-  font-weight: bold;
-  font-size: 50px;
-  border-radius: 50%;
-  /* width: 100px; */
-}
-.profile-btn{
-   padding: 15px;
-   background-color:rgb(239, 239, 239) ;
-   font-weight: bold;
-   border-radius: 45%;
-   border: none;
-   margin: 10px;
-}
-.profile-stick{
-  position: sticky;
-  top: 0;
 }
 
 /* Drag and Drop */
-/* .drag-bg{
-    wi
-} */
 /* .dropArea{
     height:100px;
     width:100px;

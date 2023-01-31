@@ -8,14 +8,12 @@ import Signup from "./Pages/Signup";
 import Login from "./Pages/Login";
 import Home from "./Pages/Home";
 import ViewPin from "./Components/ViewPin";
-import Navbar from "./Components/Navbar";
 import Profile from "./Pages/Profile";
 import SavedPin from "./Components/SavedPin";
 import CreatePin from "./Pages/CreatePin";
 import Today from "./Pages/Today";
 import TodayPin from "./Components/TodayPin";
 import { PinProvider } from "./Context/PinContext";
-import LandingHeader from "./Components/LandingHeader";
 import LandingPage from "./Components/LandingPage";
 
 function App() {
@@ -32,11 +30,9 @@ function App() {
   return (
     <PinProvider value={{ pins, setPins, savepin, setSavepin }}>
       <BrowserRouter>
-        {/* <Navbar></Navbar> */}
         <div className="container-fluid p-0">
           <Routes>
-          <Route path="/" element={<LandingPage />} />
-            {/* <Route path="/" element={<Signup />} /> */}
+            <Route path="/" element={<LandingPage />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
             <Route path="/home" element={<Home />} />

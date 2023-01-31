@@ -18,7 +18,7 @@ function Home() {
             },
           }
         );
-        console.log(pinData);
+        // console.log(pinData);
         setPins(pinData.data);
       } catch (error) {
         alert("something went wrong");
@@ -36,14 +36,14 @@ function Home() {
       {pins.length > 0 ? (
         <div className="container-fluid">
           <input
-            class="form-control rounded-pill bg-light w-50 mx-auto"
+            className="form-control rounded-pill bg-light w-50 mx-auto"
             type="text"
             placeholder="Search"
             onChange={(e) => {
               setSearchTerm(e.target.value);
             }}
           ></input>
-          <div class="gallary mt-4">
+          <div className="gallary mt-4">
             {pins
               .filter((val) => {
                 if (searchTerm == "") {
@@ -65,13 +65,14 @@ function Home() {
           </div>
         </div>
       ) : (
-        <div class="text-center mt-5">
-          <div class="spinner-border" role="status"></div>
+        <div className="text-center mt-5">
+          <div className="spinner-border" role="status"></div>
           <br></br>
-          <p class="fs-3 fw-bolder mb-0">We're adding new ideas to your</p>
-          <p class="fs-3 fw-bolder">home feed!</p>
+          <p className="fs-3 fw-bolder mb-0">We're adding new ideas to your</p>
+          <p className="fs-3 fw-bolder">home feed!</p>
         </div>
       )}
+      <i className="bi bi-question question-icon"></i>
     </>
   );
 }

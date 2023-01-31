@@ -13,42 +13,49 @@ function SavedPin() {
   return (
     <>
     <Navbar></Navbar>
-    <div className="container">
+    <section className="container">
       <h1 className="text-primary text-center fw-bold mt-3">Saved Pins</h1>
       <div class="gallary mt-4">
         {savepin.map((savedpin) => {
           return (
+            <div class="pin-container">
             <div class="pin">
-              <div class="image-container">
-                <img class="pin-image" src={savedpin.image} alt="Image" />
+              <div class="pin-image-container">
+              <Link to={`/viewpin/${savedpin._id}`}>
+                <img class="pin-image" src={savedpin.image} alt="Pin Image" />
+                </Link>
+                </div>
                 <div class="pin-content">
-                  {/* <a href={savedpin.image} download><img class="pin-icon rounded-circle p-1" src="https://img.icons8.com/external-ayo-icons-royyan-wijaya/25/external-arrow-arrow-line-ayo-icons-royyan-wijaya-2.png" alt=""/></a> */}
+                  <a href={savedpin.image} target="_blank" download>
+              <i class="bi bi-arrow-up-right me-5 rounded-circle pin-icon"></i>
+            </a>
                   <Link to={`/viewpin/${savedpin._id}`}>
-                    <img
-                      class="pin-icon rounded-circle p-1"
-                      src="https://img.icons8.com/external-icongeek26-outline-icongeek26/25/external-view-graphic-design-icongeek26-outline-icongeek26.png"
-                      alt=""
-                    />
+                    <i class="bi bi-eye rounded-circle pin-icon"></i>
                   </Link>
                 </div>
-              </div>
               <button
                 class="btn btn-danger rounded-pill pin-button"
                 onClick={() => Removesavedpin(savedpin)}
               >
                 Unsave
               </button>
-              <h5 className="mt-1 fw-bolder">{savedpin.title}</h5>
+              </div>
+              {/* <div className="pin-info">
+              <h5 className="mt-1 ms-3 fw-bolder">{savedpin.title}</h5>
               <img
-                class="img-fluid me-2 user-image"
-                src="https://i.pinimg.com/75x75_RS/e9/f7/e1/e9f7e101e3b7484d53b2b4d5a6004740.jpg"
-              ></img>
+          class="img-fluid me-2 rounded-circle user-image"
+          src="./assets/home_pin_logo.jpg"
+          height={30}
+          width={30}
+        ></img>
               <span>{savedpin.about}</span>
+              </div> */}
             </div>
           );
         })}
       </div>
-    </div>
+    </section>
+    <i className="bi bi-question question-icon"></i>
     </>
   );
 }

@@ -8,40 +8,43 @@ function Navbar() {
     navigate("/");
   };
   return (
-    <header class="mt-2">
-      <nav class="navbar navbar-expand-md navbar-light text-dark bg-transparant">
-        <Link class="navbar-brand ms-4 icon-effect" to="/home">
-          <img src="./assets/pinterest_login_logo.png" alt="Pinterest Logo"></img>
+    <header className="mt-2">
+      <nav className="navbar navbar-expand-md navbar-light text-dark bg-transparant">
+        <Link className="navbar-brand ms-4 icon-effect" to="/home">
+          <img
+            src="../assets/pinterest_login_logo.png"
+            alt="Pinterest Logo"
+          ></img>
         </Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#mainNavBar"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="mainNavBar">
-          <ul class="navbar-nav fw-bolder fs-6">
-            <li class="nav-item ms-2">
+        <div className="collapse navbar-collapse" id="mainNavBar">
+          <ul className="navbar-nav fw-bolder fs-6">
+            <li className="nav-item ms-2">
               <Link
-                class="nav-link text-dark rounded-pill nav-effect"
+                className="nav-link text-dark rounded-pill nav-effect"
                 to="/home"
               >
                 Home
               </Link>
             </li>
-            <li class="nav-item ms-2">
+            <li className="nav-item ms-2">
               <Link
-                class="nav-link text-dark rounded-pill nav-effect"
+                className="nav-link text-dark rounded-pill nav-effect"
                 to="/today"
               >
                 Today
               </Link>
             </li>
-            <li class="nav-item dropdown ms-2">
+            <li className="nav-item dropdown ms-2">
               <a
-                class="nav-link dropdown-toggle text-dark rounded-pill nav-effect"
+                className="nav-link dropdown-toggle text-dark rounded-pill nav-effect"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -50,10 +53,13 @@ function Navbar() {
               >
                 Create
               </a>
-              <ul class="dropdown-menu fs-6" aria-labelledby="navBarDropdown">
+              <ul
+                className="dropdown-menu fs-6"
+                aria-labelledby="navBarDropdown"
+              >
                 <li>
                   <Link
-                    class="dropdown-item text-dark fw-bolder"
+                    className="dropdown-item text-dark fw-bolder"
                     to="/createpin"
                   >
                     Create Pin
@@ -62,9 +68,9 @@ function Navbar() {
               </ul>
             </li>
           </ul>
-          {/* <form class="d-flex ms-3 icon-effect box"> */}
+          {/* <form className="d-flex ms-3 icon-effect box"> */}
           {/* <input
-              class="form-control rounded-pill bg-light"
+              className="form-control rounded-pill bg-light"
               type="text"
               placeholder="Search"
               onChange={(e) => {
@@ -72,45 +78,45 @@ function Navbar() {
               }}
             ></input> */}
           {/* </form> */}
-          <ul class="navbar-nav ms-auto me-2">
-            {/* <li class="nav-item ms-2 icon-effect">
-              <Link class="nav-link" to="/profile">
-                <i class="bi bi-person-circle fs-4"></i>
+          <ul className="navbar-nav ms-auto me-2">
+            {/* <li className="nav-item ms-2 icon-effect">
+              <Link className="nav-link" to="/profile">
+                <i className="bi bi-person-circle fs-4"></i>
               </Link>
             </li> */}
-            {/* <li className="nav-item">
-              <button className="btn btn-sm">
+            {/* <li classNameName="nav-item">
+              <button classNameName="btn btn-sm">
                 <Link
-                  className="nav-link bg-success rounded-pill fs-6 text-white fw-bold p-2"
+                  classNameName="nav-link bg-success rounded-pill fs-6 text-white fw-bold p-2"
                   to="/login"
                 >
                   Log in
                 </Link>
               </button>
             </li>
-            <li className="nav-item">
-              <button className="btn btn-sm">
+            <li classNameName="nav-item">
+              <button classNameName="btn btn-sm">
                 <Link
-                  className="nav-link bg-secondary bg-opacity-25 rounded-pill fs-6 text-dark fw-bold p-2"
+                  classNameName="nav-link bg-secondary bg-opacity-25 rounded-pill fs-6 text-dark fw-bold p-2"
                   to="/signup"
                 >
                   Sign up
                 </Link>
               </button>
             </li> */}
-            <li class="nav-item me-1 icon-effect">
-              <a class="nav-link" href="#">
-                <i class="bi bi-bell-fill fs-4 ms-2 me-2"></i>
+            <li className="nav-item me-1 icon-effect">
+              <a className="nav-link" href="#">
+                <i className="bi bi-bell-fill fs-4 ms-2 me-2"></i>
               </a>
             </li>
-            <li class="nav-item me-1 icon-effect">
-              <a class="nav-link" href="#">
-                <i class="bi bi-chat-dots-fill fs-4 ms-2 me-2"></i>
+            <li className="nav-item me-1 icon-effect">
+              <a className="nav-link" href="#">
+                <i className="bi bi-chat-dots-fill fs-4 ms-2 me-2"></i>
               </a>
             </li>
-            <li class="nav-item me-1 icon-effect">
-              <Link class="nav-link" to="/profile">
-                <i class="bi bi-person-circle fs-4 ms-2 me-2"></i>
+            <li className="nav-item me-1 icon-effect">
+              <Link className="nav-link" to="/profile">
+                <i className="bi bi-person-circle fs-4 ms-2 me-2"></i>
               </Link>
             </li>
             <li className="nav-item ms-2 me-2 mt-1">
