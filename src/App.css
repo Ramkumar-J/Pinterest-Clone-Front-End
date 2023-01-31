@@ -143,7 +143,7 @@ border: none;
 .gallary .pin .pin-image{
   width: 100%;
   height: 100%;
-  border-radius: 5%;
+  border-radius: 20px;
   opacity:1;
   cursor: zoom-in;
 }
