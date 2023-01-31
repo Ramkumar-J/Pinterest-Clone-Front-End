@@ -9,7 +9,7 @@ function Today() {
       <Navbar></Navbar>
       <section className="container text-center">
         <h1 className="mt-2">Today's Inspiration</h1>
-        <h4 className="mt-2">September 5,2022</h4>
+        <h4 className="mt-2">January 24,2023</h4>
         <TodayPin></TodayPin>
         <i className="bi bi-check-circle-fill fs-2 mt-5"></i>
         <p className="mb-0">That's all for today!</p>
